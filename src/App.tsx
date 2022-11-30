@@ -1,58 +1,143 @@
+import { useEffect } from "react";
+
+import { ReactComponent as EmailLogo } from "./assets/social-logos/email.svg";
+import { ReactComponent as GithubLogo } from "./assets/social-logos/github.svg";
+import { ReactComponent as LinkedInLogo } from "./assets/social-logos/linkedin.svg";
+
+const navLinkStyles =
+  "hover:text-white hover:bg-neutral-800 px-2 py-1 rounded-md";
+const sectionHeading =
+  "text-white text-3xl sm:text-4xl mb-3";
+
 function App() {
+  useEffect(() => {
+    globalThis.document;
+  }, []);
   return (
     <>
-      <header>
-        <nav className="flex space-x-2 h-12">
-          <a href="#">About</a>
-          <a href="#">Exprience</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
-          <a href="#">Resume</a>
-        </nav>
-      </header>
-      <main className="mx-auto">
-        <section>
-          {/* INTRO (ALSO HAS CONTACT) */}
+      <header className="sticky top-0 bg-neutral-900/95 backdrop-blur-sm shadow-lg mb-8 sm:mb-16 flex">
+        <a
+          href="#intro"
+          title="Click to go back to top"
+          className="mr-2"
+        >
           <img
-            className="rounded-full h-40 w-40"
-            src="/my-headshot.webp"
-            alt=""
+            src="/logo-64x64.webp"
+            alt="Home | Pezhman Ghavami"
           />
-          <div>
-            <h1 className="text-5xl">
-              Hello! I'm Pezhman Ghavami.
+        </a>
+        <div className="flex-1 flex justify-between items-center">
+          <nav className="flex justify-evenly items-center">
+            <a
+              href="#about"
+              title="Click to go to the about section"
+              className={navLinkStyles}
+            >
+              About
+            </a>
+            <a
+              href="#experiences"
+              title="Click to go to the experiences section"
+              className={navLinkStyles}
+            >
+              Expriences
+            </a>
+            <a
+              href="#projects"
+              title="Click to go to the projects section"
+              className={navLinkStyles}
+            >
+              Projects
+            </a>
+            <a
+              href="#contact"
+              title="Click to go to the contact section"
+              className={navLinkStyles}
+            >
+              Contact
+            </a>
+          </nav>
+          <button
+            type="button"
+            title="Click to download my resume"
+            className="rounded-md px-2 py-1 border hover:text-white hover:bg-neutral-800"
+          >
+            Resume
+          </button>
+        </div>
+      </header>
+      <main className="mx-auto space-y-12 text-lg">
+        {/* Intro */}
+        <section
+          id="intro"
+          className="flex flex-col-reverse sm:flex-row sm:justify-between items-center text-white text-center sm:text-left scroll-m-8 sm:scroll-m-16"
+        >
+          {/* INTRO (ALSO HAS CONTACT) */}
+          <div className="space-y-4 sm:mr-6">
+            <h1 className="text-4xl sm:text-5xl font-medium">
+              Hello! I'm Pezhman Ghavami
             </h1>
-            <h3 className="text-3xl">
+            <h2 className="text-2xl sm:text-3xl">
               I'm a Full-Stack developer based in iran.
-            </h3>
-            {/* Shove location somewhere here */}
-            LINKS
+            </h2>
+          </div>
+          <div className="w-36 h-36 sm:w-48 sm:h-48 mb-12 sm:mb-0">
+            <img
+              className="rounded-full"
+              src="/my-headshot.webp"
+              alt=""
+            />
+            <div className="flex justify-evenly items-center text-white">
+              <a href="">
+                <GithubLogo className="w-7 h-7 hover:brightness-75" />
+              </a>
+              <a href="">
+                <LinkedInLogo className="w-6 h-6 hover:brightness-75" />
+              </a>
+              <a href="">
+                <EmailLogo className="w-7 h-7 hover:brightness-75" />
+              </a>
+            </div>
           </div>
         </section>
         {/* ABOUT */}
-        <section>
-          <h2>About Me</h2>
-          <p>
-            Since the beginning of my journey over the past
-            5 years, I have been passionate about building
-            dynamic, creative products using bleeding edge
-            technologies to deliver intuitive user
-            experiences.
-          </p>
-          <p>
-            I am experienced (ADD LINK TO EXPERIENCES
-            SECTION) in taking fullstack applications from
-            scratch to production.
-          </p>
-          <p>
-            (ADD LINK TO PROJECT SECTION) Currently I am
-            iterating over this website and my other
-            projects. Feel free to contact me if you are
-            interested in working with me!
-          </p>
+        <section id="about">
+          <h2 className={sectionHeading}>About Me</h2>
+          <div className="space-y-2">
+            <p>
+              Since the beginning of my journey I have been
+              passionate about building dynamic, creative
+              products using bleeding edge technologies to
+              deliver intuitive user experiences.
+            </p>
+            <p>
+              Over the past 5 years I have{" "}
+              <a
+                href="#experiences"
+                className="text-blue-400 hover:underline"
+              >
+                worked
+              </a>{" "}
+              on a wide variety of projects taking them from
+              ideas to production.
+            </p>
+            <p>
+              Currently I am iterating over this website and
+              my{" "}
+              <a
+                href="#projects"
+                className="text-blue-400 hover:underline"
+              >
+                other projects
+              </a>
+              . Feel free to contact me if you are
+              interested in working with me!
+            </p>
+          </div>
         </section>
-        <section>
-          <h2>Experiences</h2>
+        {/* Experiences */}
+        <section id="experiences">
+          <h2 className={sectionHeading}>Experiences</h2>
           work experience 2017-2022
           <p>
             co-founder and software engineer at rayabot{" "}
@@ -64,7 +149,7 @@ function App() {
             signals, delivering trade notifications, and
             monitoring cbots status (Nodejs) <br /> a
             wordpress ecommerce website <br /> lead a team
-            of 2 for building a paas solution which
+            of 3 for building a paas solution which
             included: <br /> a sse server for realtime
             communications with clients <br /> a gui made
             using electron to act as a client for metatrader{" "}
@@ -72,8 +157,9 @@ function App() {
             user and admin control panels using react-admin
           </p>
         </section>
-        <section>
-          <h2>PROJECTS</h2>
+        {/* Projects */}
+        <section id="projects">
+          <h2 className={sectionHeading}>PROJECTS</h2>
           <p>
             Here are some of the project that I'm currently
             working on; These are like playgrounds so I can
@@ -135,7 +221,14 @@ function App() {
             <li>C#</li>
           </ul>
         </section>
-        <section>CONTACT</section>
+        {/* Contact */}
+        <section id="contact">
+          <h2 className={sectionHeading}>Contact</h2>
+          <p>
+            If you'd like to build something cool together
+            you can contact me through ways listed below
+          </p>
+        </section>
       </main>
     </>
   );
