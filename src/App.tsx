@@ -6,8 +6,9 @@ import { ReactComponent as LinkedInLogo } from "./assets/social-logos/linkedin.s
 
 const navLinkStyles =
   "hover:text-white hover:bg-neutral-800 px-2 py-1 rounded-md";
-const sectionHeading =
+const sectionHeadingStyles =
   "text-white text-3xl sm:text-4xl mb-3";
+const anchroTagStyles = "text-blue-400 hover:underline";
 
 function App() {
   useEffect(() => {
@@ -36,11 +37,11 @@ function App() {
               About
             </a>
             <a
-              href="#experiences"
-              title="Click to go to the experiences section"
+              href="#work-experience"
+              title="Click to go to the work experience section"
               className={navLinkStyles}
             >
-              Expriences
+              Work Experience
             </a>
             <a
               href="#projects"
@@ -85,7 +86,7 @@ function App() {
             <img
               className="rounded-full"
               src="/my-headshot.webp"
-              alt=""
+              alt="My-photo"
             />
             <div className="flex justify-evenly items-center text-white">
               <a href="">
@@ -102,7 +103,7 @@ function App() {
         </section>
         {/* ABOUT */}
         <section id="about">
-          <h2 className={sectionHeading}>About Me</h2>
+          <h2 className={sectionHeadingStyles}>About Me</h2>
           <div className="space-y-2">
             <p>
               Since the beginning of my journey I have been
@@ -113,8 +114,8 @@ function App() {
             <p>
               Over the past 5 years I have{" "}
               <a
-                href="#experiences"
-                className="text-blue-400 hover:underline"
+                href="#work-experience"
+                className={anchroTagStyles}
               >
                 worked
               </a>{" "}
@@ -126,7 +127,7 @@ function App() {
               my{" "}
               <a
                 href="#projects"
-                className="text-blue-400 hover:underline"
+                className={anchroTagStyles}
               >
                 other projects
               </a>
@@ -135,31 +136,111 @@ function App() {
             </p>
           </div>
         </section>
-        {/* Experiences */}
-        <section id="experiences">
-          <h2 className={sectionHeading}>Experiences</h2>
-          work experience 2017-2022
-          <p>
-            co-founder and software engineer at rayabot{" "}
-            <br /> turned trading strategies into automated
-            trading solutions(cbots) and indicators (cTrader
-            cAlgo c#) <br /> internal REST api for
-            authunticating and managing cbots (express){" "}
-            <br /> telegram bots for broadcasting indicator
-            signals, delivering trade notifications, and
-            monitoring cbots status (Nodejs) <br /> a
-            wordpress ecommerce website <br /> lead a team
-            of 3 for building a paas solution which
-            included: <br /> a sse server for realtime
-            communications with clients <br /> a gui made
-            using electron to act as a client for metatrader{" "}
-            <br />
-            user and admin control panels using react-admin
-          </p>
+        {/* Work Experience */}
+        <section id="work-experience">
+          <h2 className={sectionHeadingStyles}>
+            Work Experience
+          </h2>
+          <div className="sm:grid grid-cols-4">
+            <p className="flex-1 w-fit col-span-1 brightness-90">
+              2017-2022
+            </p>
+            <div className="col-span-3">
+              <a
+                className={anchroTagStyles}
+                href="https://rayabot.com/"
+              >
+                Co-Founder and Full-Stack Developer -
+                Rayabot
+              </a>
+
+              <div className="space-y-3">
+                <div>
+                  <p className="text-base brightness-90">
+                    2019-2021
+                  </p>
+                  <p>
+                    Worked with a team of developers and
+                    designers to build a SaaS solution which
+                    included:
+                  </p>
+                  <ul className="list-disc list-inside">
+                    <li>
+                      A user control panel for managing
+                      subscriptions
+                    </li>
+                    <li>
+                      An admin control panel to manage users
+                      and cBots
+                    </li>
+                    <li>
+                      cBots performance data visualization,
+                      in the admin panel
+                    </li>
+                    <li>
+                      A sse server for realtime
+                      communications with the clients
+                    </li>
+                    <li>
+                      A client in the cTrader platform as a
+                      cBot
+                    </li>
+                    <li>
+                      A gui made using electron to act as a
+                      client for metatrader
+                    </li>
+                  </ul>
+                  <p>A LIST OF TECH</p>
+                </div>
+                <div>
+                  <p className="text-base brightness-90">
+                    2019
+                  </p>
+                  <p>
+                    Made an internal REST api for
+                    authunticating and managing cbots.
+                  </p>
+                  <p>A LIST OF TECH</p>
+                </div>
+                <div>
+                  <p className="text-base brightness-90">
+                    2018
+                  </p>
+                  <p>Made a wordpress e-commerce website</p>
+                  <p>A LIST OF TECH</p>
+                </div>
+                <div>
+                  <p className="text-base brightness-90">
+                    2017-2022
+                  </p>
+                  <p>
+                    Closely collaborated with the trading
+                    team to turn their strategies into
+                    indicators and automated trading
+                    solutions in the cAlgo platform.
+                  </p>
+                  <p>A LIST OF TECH</p>
+                </div>
+                <div>
+                  <p className="text-base brightness-90">
+                    2017-2022
+                  </p>
+
+                  <p>
+                    Made several telegram bots for
+                    broadcasting indicator signals,
+                    delivering trade notifications, and
+                    monitoring different cBot statuses
+                  </p>
+                  <p>A LIST OF TECH</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         {/* Projects */}
         <section id="projects">
-          <h2 className={sectionHeading}>PROJECTS</h2>
+          <h2 className={sectionHeadingStyles}>PROJECTS</h2>
           <p>
             Here are some of the project that I'm currently
             working on; These are like playgrounds so I can
@@ -223,7 +304,7 @@ function App() {
         </section>
         {/* Contact */}
         <section id="contact">
-          <h2 className={sectionHeading}>Contact</h2>
+          <h2 className={sectionHeadingStyles}>Contact</h2>
           <p>
             If you'd like to build something cool together
             you can contact me through ways listed below
