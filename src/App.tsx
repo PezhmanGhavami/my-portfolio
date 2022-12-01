@@ -5,7 +5,7 @@ import { ReactComponent as GithubLogo } from "./assets/social-logos/github.svg";
 import { ReactComponent as LinkedInLogo } from "./assets/social-logos/linkedin.svg";
 
 const navLinkStyles =
-  "hover:text-white hover:bg-neutral-800 px-2 py-1 rounded-md";
+  "transition-colors duration-150 hover:text-white hover:bg-neutral-800 px-2 py-1 rounded-md";
 const sectionHeadingStyles =
   "text-white text-3xl sm:text-4xl mb-3";
 const anchroTagStyles = "text-blue-400 hover:underline";
@@ -36,6 +36,8 @@ function App() {
         48;
       aboutRef.current?.clientHeight;
       console.log(globalThis.window.scrollY);
+      console.log(globalThis.window.innerHeight - 32);
+
       // console.log(aboutTriggerPoint);
       // console.log(workTriggerPoint);
       // console.log(projectsTriggerPoint);
@@ -127,13 +129,13 @@ function App() {
           <button
             type="button"
             title="Click to download my resume"
-            className="rounded-md px-2 py-1 border hover:text-white hover:bg-neutral-800"
+            className="transition-colors duration-150 rounded-md px-2 py-1 border hover:text-white hover:bg-neutral-800"
           >
             Resume
           </button>
         </div>
       </header>
-      <main className="mx-auto space-y-12 text-lg">
+      <main className="mx-auto space-y-12 mb-8 sm:mb-16 text-lg">
         {/* Intro */}
         <section
           id="intro"
@@ -156,13 +158,13 @@ function App() {
             />
             <div className="flex justify-evenly items-center text-white">
               <a href="">
-                <GithubLogo className="w-7 h-7 hover:brightness-75" />
+                <GithubLogo className="w-7 h-7 transition-colors duration-150 hover:text-white/70" />
               </a>
               <a href="">
-                <LinkedInLogo className="w-6 h-6 hover:brightness-75" />
+                <LinkedInLogo className="w-6 h-6 transition-colors duration-150 hover:text-white/70" />
               </a>
               <a href="">
-                <EmailLogo className="w-7 h-7 hover:brightness-75" />
+                <EmailLogo className="w-7 h-7 transition-colors duration-150 hover:text-white/70" />
               </a>
             </div>
           </div>
