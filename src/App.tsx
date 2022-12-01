@@ -16,7 +16,7 @@ function App() {
   }, []);
   return (
     <>
-      <header className="sticky top-0 bg-neutral-900/95 backdrop-blur-sm shadow-lg mb-8 sm:mb-16 flex">
+      <header className="sticky top-0 bg-neutral-900/95 backdrop-blur-sm shadow-lg mb-8 sm:mb-16 flex z-50">
         <a
           href="#intro"
           title="Click to go back to top"
@@ -82,7 +82,7 @@ function App() {
               I'm a Full-Stack developer based in iran.
             </h2>
           </div>
-          <div className="w-36 h-36 sm:w-48 sm:h-48 mb-12 sm:mb-0">
+          <div className="w-36 h-36 sm:w-48 sm:h-48 mb-12 sm:mb-0 flex flex-col justify-between ">
             <img
               className="rounded-full"
               src="/my-headshot.webp"
@@ -145,7 +145,7 @@ function App() {
             <p className="flex-1 w-fit col-span-1 brightness-90">
               2017-2022
             </p>
-            <div className="col-span-3">
+            <div className="col-span-3 space-y-2">
               <a
                 className={anchroTagStyles}
                 href="https://rayabot.com/"
@@ -154,14 +154,12 @@ function App() {
                 Rayabot
               </a>
 
-              <div className="space-y-3">
+              <div className="space-y-3 text-base">
                 <div>
-                  <p className="text-base brightness-90">
-                    2019-2021
-                  </p>
+                  <p className="brightness-90">2019-2021</p>
                   <p>
                     Worked with a team of developers and
-                    designers to build a SaaS solution which
+                    designers to build a SaaS product which
                     included:
                   </p>
                   <ul className="list-disc list-inside">
@@ -171,26 +169,33 @@ function App() {
                     </li>
                     <li>
                       An admin control panel to manage users
-                      and cBots
+                      and the instances of our automated
+                      trading software
                     </li>
                     <li>
-                      cBots performance data visualization,
-                      in the admin panel
+                      Product performance data
+                      visualization, in the admin panel
                     </li>
                     <li>
-                      A sse server for realtime
-                      communications with the clients
+                      An SSE server for Realtime broadcast
+                      of our trading software's, server
+                      instance events, to the clients
                     </li>
                     <li>
                       A client in the cTrader platform as a
                       cBot
                     </li>
                     <li>
-                      A gui made using electron to act as a
-                      client for metatrader
+                      A GUI made using electron to act as a
+                      bridge client for MetaTrader
                     </li>
                   </ul>
-                  <p>A LIST OF TECH</p>
+                  <p className="brightness-75 text-lg">
+                    React • Redux-Toolkit • Sass • Styled
+                    Components • D3.js • Electron •
+                    Express.js • PostgreSQL • Redis •
+                    JavaScript • C# • cAlgo • MQL5
+                  </p>
                 </div>
                 <div>
                   <p className="text-base brightness-90">
@@ -198,16 +203,23 @@ function App() {
                   </p>
                   <p>
                     Made an internal REST api for
-                    authunticating and managing cbots.
+                    authunticating and managing trading
+                    softwares.
                   </p>
-                  <p>A LIST OF TECH</p>
+                  <p className="brightness-75 text-lg">
+                    Express.js • JavaScript
+                  </p>
                 </div>
                 <div>
                   <p className="text-base brightness-90">
                     2018
                   </p>
-                  <p>Made a wordpress e-commerce website</p>
-                  <p>A LIST OF TECH</p>
+                  <p>
+                    Made a wordpress e-commerce website.
+                  </p>
+                  <p className="brightness-75 text-lg">
+                    Wordpress
+                  </p>
                 </div>
                 <div>
                   <p className="text-base brightness-90">
@@ -219,7 +231,9 @@ function App() {
                     indicators and automated trading
                     solutions in the cAlgo platform.
                   </p>
-                  <p>A LIST OF TECH</p>
+                  <p className="brightness-75 text-lg">
+                    cAlgo • C#
+                  </p>
                 </div>
                 <div>
                   <p className="text-base brightness-90">
@@ -230,9 +244,13 @@ function App() {
                     Made several telegram bots for
                     broadcasting indicator signals,
                     delivering trade notifications, and
-                    monitoring different cBot statuses
+                    monitoring different trading software
+                    statuses.
                   </p>
-                  <p>A LIST OF TECH</p>
+                  <p className="brightness-75 text-lg">
+                    Node.js • Prisma • SQLite • JavaScript •
+                    TypeScript
+                  </p>
                 </div>
               </div>
             </div>
