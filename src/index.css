@@ -5,3 +5,7 @@
 body {
   @apply mx-auto w-11/12 max-w-2xl bg-neutral-900 text-neutral-300;
 }
+
+html {
+  @apply scroll-smooth;
+}

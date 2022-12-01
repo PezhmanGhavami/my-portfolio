@@ -44,11 +44,11 @@ function App() {
               Work Experience
             </a>
             <a
-              href="#projects"
-              title="Click to go to the projects section"
+              href="#personal-projects"
+              title="Click to go to the personal projects section"
               className={navLinkStyles}
             >
-              Projects
+              Perosnal Projects
             </a>
             <a
               href="#contact"
@@ -71,7 +71,7 @@ function App() {
         {/* Intro */}
         <section
           id="intro"
-          className="flex flex-col-reverse sm:flex-row sm:justify-between items-center text-white text-center sm:text-left scroll-m-8 sm:scroll-m-16"
+          className="flex flex-col-reverse sm:flex-row sm:justify-between items-center text-white text-center sm:text-left scroll-m-16"
         >
           {/* INTRO (ALSO HAS CONTACT) */}
           <div className="space-y-4 sm:mr-6">
@@ -102,7 +102,7 @@ function App() {
           </div>
         </section>
         {/* ABOUT */}
-        <section id="about">
+        <section className="scroll-m-16" id="about">
           <h2 className={sectionHeadingStyles}>About Me</h2>
           <div className="space-y-2">
             <p>
@@ -126,18 +126,27 @@ function App() {
               Currently I am iterating over this website and
               my{" "}
               <a
-                href="#projects"
+                href="#personal-projects"
                 className={anchroTagStyles}
               >
                 other projects
               </a>
-              . Feel free to contact me if you are
-              interested in working with me!
+              . Feel free to{" "}
+              <a
+                className={anchroTagStyles}
+                href="#contact"
+              >
+                contact me
+              </a>{" "}
+              if you are interested in working with me!
             </p>
           </div>
         </section>
         {/* Work Experience */}
-        <section id="work-experience">
+        <section
+          className="scroll-m-16"
+          id="work-experience"
+        >
           <h2 className={sectionHeadingStyles}>
             Work Experience
           </h2>
@@ -256,14 +265,19 @@ function App() {
             </div>
           </div>
         </section>
-        {/* Projects */}
-        <section id="projects">
-          <h2 className={sectionHeadingStyles}>PROJECTS</h2>
+        {/* Personal Projects */}
+        <section
+          className="scroll-m-16"
+          id="personal-projects"
+        >
+          <h2 className={sectionHeadingStyles}>
+            Personal Projects
+          </h2>
           <p>
-            Here are some of the project that I'm currently
-            working on; These are like playgrounds so I can
-            checkout different tech and play around with
-            them!
+            Here are some of my personal project that I'm
+            currently working on; These are like playgrounds
+            so I can checkout different tech and play around
+            with them!
           </p>
           <div>clothing shop</div>
           <div>chat app</div>
