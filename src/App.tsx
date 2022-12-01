@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { ReactComponent as EmailLogo } from "./assets/social-logos/email.svg";
 import { ReactComponent as GithubLogo } from "./assets/social-logos/github.svg";
@@ -11,9 +11,71 @@ const sectionHeadingStyles =
 const anchroTagStyles = "text-blue-400 hover:underline";
 
 function App() {
+  const [isInAbout, setIsInAbout] = useState(false);
+  const [isInWork, setIsInWork] = useState(false);
+  const [isInProjects, setIsInProjects] = useState(false);
+  const [isInContact, setIsInContact] = useState(false);
+
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const workRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    globalThis.document;
+    const handleScroll = () => {
+      const aboutTriggerPoint =
+        aboutRef.current?.clientHeight;
+      const workTriggerPoint = aboutTriggerPoint! * 2 + 48;
+      const projectsTriggerPoint =
+        workRef.current?.clientHeight! +
+        workTriggerPoint +
+        48;
+      const conractTriggerPoint =
+        projectsRef.current?.clientHeight! +
+        projectsTriggerPoint +
+        48;
+      aboutRef.current?.clientHeight;
+      console.log(globalThis.window.scrollY);
+      // console.log(aboutTriggerPoint);
+      // console.log(workTriggerPoint);
+      // console.log(projectsTriggerPoint);
+      // console.log(conractTriggerPoint);
+      if (
+        globalThis.window.scrollY >= aboutTriggerPoint! &&
+        globalThis.window.scrollY < workTriggerPoint!
+      ) {
+        console.log("is in about");
+        setIsInAbout(true);
+        setIsInWork(false);
+        setIsInProjects(false);
+        setIsInContact(false);
+      } else if (
+        globalThis.window.scrollY >= workTriggerPoint!
+      ) {
+        console.log("is in work");
+        setIsInAbout(false);
+        setIsInWork(true);
+        setIsInProjects(false);
+        setIsInContact(false);
+      } else {
+        setIsInAbout(false);
+        setIsInWork(false);
+        setIsInProjects(false);
+        setIsInContact(false);
+      }
+    };
+    globalThis.document.addEventListener(
+      "scroll",
+      handleScroll
+    );
+    return () => {
+      globalThis.document.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+    };
   }, []);
+
   return (
     <>
       <header className="sticky top-0 bg-neutral-900/95 backdrop-blur-sm shadow-lg mb-8 sm:mb-16 flex z-50">
@@ -32,14 +94,18 @@ function App() {
             <a
               href="#about"
               title="Click to go to the about section"
-              className={navLinkStyles}
+              className={`${navLinkStyles}${
+                isInAbout ? " text-white font-semibold" : ""
+              }`}
             >
               About
             </a>
             <a
               href="#work-experience"
               title="Click to go to the work experience section"
-              className={navLinkStyles}
+              className={`${navLinkStyles}${
+                isInWork ? " text-white font-semibold" : ""
+              }`}
             >
               Work Experience
             </a>
@@ -102,7 +168,11 @@ function App() {
           </div>
         </section>
         {/* ABOUT */}
-        <section className="scroll-m-16" id="about">
+        <section
+          ref={aboutRef}
+          className="scroll-m-16"
+          id="about"
+        >
           <h2 className={sectionHeadingStyles}>About Me</h2>
           <div className="space-y-2">
             <p>
@@ -144,6 +214,7 @@ function App() {
         </section>
         {/* Work Experience */}
         <section
+          ref={workRef}
           className="scroll-m-16"
           id="work-experience"
         >
@@ -267,6 +338,7 @@ function App() {
         </section>
         {/* Personal Projects */}
         <section
+          ref={projectsRef}
           className="scroll-m-16"
           id="personal-projects"
         >
@@ -285,7 +357,7 @@ function App() {
         </section>
         {/* Technical skills */}
         {/* I can mix these with the experience and projects section */}
-        <section>
+        {/* <section>
           <h2>
             Here are some of my favourite technologes that
             i'm currently using
@@ -333,9 +405,9 @@ function App() {
             <li>Docker</li>
             <li>C#</li>
           </ul>
-        </section>
+        </section> */}
         {/* Contact */}
-        <section id="contact">
+        <section ref={contactRef} id="contact">
           <h2 className={sectionHeadingStyles}>Contact</h2>
           <p>
             If you'd like to build something cool together
