@@ -11,6 +11,7 @@ const sectionHeadingStyles =
 const anchroTagStyles = "text-blue-400 hover:underline";
 
 function App() {
+  const [openMenu, setOpenMenu] = useState(false);
   const [isInAbout, setIsInAbout] = useState(false);
   const [isInWork, setIsInWork] = useState(false);
   const [isInProjects, setIsInProjects] = useState(false);
@@ -20,6 +21,10 @@ function App() {
   const workRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+
+  const toggleMenu = () => {
+    setOpenMenu((prev) => !prev);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,7 +85,7 @@ function App() {
 
   return (
     <>
-      <header className="sticky top-0 bg-neutral-900/95 backdrop-blur-sm shadow-lg mb-8 sm:mb-16 flex z-50">
+      <header className="sticky top-0 bg-neutral-900/95 backdrop-blur-sm shadow-lg mx-auto max-w-2xl mb-8 sm:mb-16 flex justify-between items-center pr-3 z-50 overflow-hidden">
         <a
           href="#intro"
           title="Click to go back to top"
@@ -91,8 +96,35 @@ function App() {
             alt="Home | Pezhman Ghavami"
           />
         </a>
-        <div className="flex-1 flex justify-between items-center">
-          <nav className="flex justify-evenly items-center">
+
+        <div
+          onClick={toggleMenu}
+          className={`sm:hidden flex flex-col justify-center items-center w-8 h-8 p-1 space-y-1 bg-neutral-600 rounded-md transition${
+            openMenu ? " ring-2 ring-neutral-400" : ""
+          }`}
+        >
+          <div
+            className={`w-full h-[2px] transition ${
+              openMenu
+                ? "translate-y-[0.2rem] -rotate-45 bg-white"
+                : "bg-neutral-300"
+            }`}
+          />
+          <div
+            className={`h-[2px] transition ${
+              openMenu
+                ? "w-full -translate-y-[0.2rem] rotate-45 bg-white"
+                : "bg-neutral-300 w-4/6 self-end"
+            }`}
+          />
+        </div>
+
+        <div
+          className={`absolute ${
+            openMenu ? "translate-x-0" : "translate-x-full"
+          } bg-neutral-800 sm:translate-x-0 sm:static sm:bg-inherit flex-1 flex flex-col sm:flex-row justify-between items-center`}
+        >
+          <nav className="flex flex-col sm:flex-row justify-evenly items-center">
             <a
               href="#about"
               title="Click to go to the about section"
@@ -135,7 +167,7 @@ function App() {
           </button>
         </div>
       </header>
-      <main className="mx-auto space-y-12 mb-8 sm:mb-16 text-lg">
+      <main className="mx-auto w-11/12 max-w-2xl space-y-12 mb-8 sm:mb-16 text-lg">
         {/* Intro */}
         <section
           id="intro"
