@@ -25,6 +25,9 @@ function App() {
   const toggleMenu = () => {
     setOpenMenu((prev) => !prev);
   };
+  const closeMenu = () => {
+    setOpenMenu(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,8 +87,15 @@ function App() {
   }, []);
 
   return (
-    <>
-      <header className="sticky top-0 bg-neutral-900/95 backdrop-blur-sm shadow-lg mx-auto max-w-2xl mb-8 sm:mb-16 flex justify-between items-center pr-3 z-50 overflow-hidden">
+    <div className="overflow-x-hidden">
+      {openMenu && (
+        <div
+          onClick={closeMenu}
+          className="fixed z-10 w-screen h-screen inset-0 bg-neutral-900/10 backdrop-blur-sm"
+        />
+      )}
+      <header className="fixed inset-x-0 z-30 top-0 bg-neutral-900/95 backdrop-blur-sm shadow-lg mx-auto max-w-2xl flex justify-between sm:justify-start items-center pr-3 sm:p-0">
+        {/* Logo */}
         <a
           href="#intro"
           title="Click to go back to top"
@@ -96,10 +106,10 @@ function App() {
             alt="Home | Pezhman Ghavami"
           />
         </a>
-
+        {/* Menu button */}
         <div
           onClick={toggleMenu}
-          className={`sm:hidden flex flex-col justify-center items-center w-8 h-8 p-1 space-y-1 bg-neutral-600 rounded-md transition${
+          className={`sm:hidden z-40 flex flex-col justify-center items-center w-8 h-8 p-1 space-y-1 bg-neutral-700 rounded-md transition${
             openMenu ? " ring-2 ring-neutral-400" : ""
           }`}
         >
@@ -118,46 +128,49 @@ function App() {
             }`}
           />
         </div>
-
-        <div
-          className={`absolute ${
-            openMenu ? "translate-x-0" : "translate-x-full"
-          } bg-neutral-800 sm:translate-x-0 sm:static sm:bg-inherit flex-1 flex flex-col sm:flex-row justify-between items-center`}
+        {/* Nav links and resume button */}
+        <nav
+          className={`flex-1 flex flex-col sm:flex-row justify-evenly sm:justify-between absolute z-20 sm:static top-0 right-0 h-screen w-2/3 sm:h-auto translate-x-full sm:translate-x-0 transition-transform duration-150 bg-neutral-800 sm:bg-transparent px-12 sm:px-0 text-lg sm:text-base${
+            openMenu ? " translate-x-0" : ""
+          }`}
         >
-          <nav className="flex flex-col sm:flex-row justify-evenly items-center">
-            <a
-              href="#about"
+          <ul className="flex flex-col sm:flex-row justify-center items-center h-2/3">
+            <li
+              onClick={closeMenu}
               title="Click to go to the about section"
               className={`${navLinkStyles}${
                 isInAbout ? " text-white font-semibold" : ""
               }`}
             >
-              About
-            </a>
-            <a
-              href="#work-experience"
+              {" "}
+              <a href="#about">About</a>
+            </li>
+            <li
+              onClick={closeMenu}
               title="Click to go to the work experience section"
               className={`${navLinkStyles}${
                 isInWork ? " text-white font-semibold" : ""
               }`}
             >
-              Work Experience
-            </a>
-            <a
-              href="#personal-projects"
+              <a href="#work-experience">Work Experience</a>
+            </li>
+            <li
+              onClick={closeMenu}
               title="Click to go to the personal projects section"
               className={navLinkStyles}
             >
-              Perosnal Projects
-            </a>
-            <a
-              href="#contact"
+              <a href="#personal-projects">
+                Perosnal Projects
+              </a>
+            </li>
+            <li
+              onClick={closeMenu}
               title="Click to go to the contact section"
               className={navLinkStyles}
             >
-              Contact
-            </a>
-          </nav>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
           <button
             type="button"
             title="Click to download my resume"
@@ -165,9 +178,9 @@ function App() {
           >
             Resume
           </button>
-        </div>
+        </nav>
       </header>
-      <main className="mx-auto w-11/12 max-w-2xl space-y-12 mb-8 sm:mb-16 text-lg">
+      <main className="mx-auto w-11/12 max-w-2xl space-y-12 my-28 text-lg">
         {/* Intro */}
         <section
           id="intro"
@@ -449,7 +462,7 @@ function App() {
           </p>
         </section>
       </main>
-    </>
+    </div>
   );
 }
 
