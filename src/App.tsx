@@ -196,7 +196,7 @@ function App() {
           <button
             type="button"
             title="Click to download my resume"
-            className="transition-colors duration-150 rounded-md px-2 py-1 border hover:text-white hover:bg-neutral-800"
+            className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
           >
             Resume
           </button>
@@ -420,7 +420,7 @@ function App() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-4 mt-8 gap-4">
             {/* Clothing Shop */}
-            <div className="border rounded-md sm:col-span-2">
+            <div className="flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-span-2">
               <img
                 src=""
                 alt="Clothing shop image"
@@ -439,24 +439,24 @@ function App() {
                   iron-session • Prisma • PostgreSQL •
                   TypeScript
                 </p>
-                <div className="flex flex-col justify-around items-center h-32 mt-2 py-4">
-                  <a
-                    href="#"
-                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
-                  >
-                    See the code
-                  </a>
-                  <a
-                    href="#"
-                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
-                  >
-                    Checkout the live version
-                  </a>
-                </div>
+              </div>
+              <div className="flex flex-col justify-around items-center space-y-2 mt-2 py-4">
+                <a
+                  href="#"
+                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                >
+                  See the code
+                </a>
+                <a
+                  href="#"
+                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                >
+                  Checkout the live version
+                </a>
               </div>
             </div>
             {/* Chat App */}
-            <div className="border rounded-md sm:col-span-2">
+            <div className="flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-span-2">
               <img
                 src=""
                 alt="Chat app image"
@@ -476,24 +476,24 @@ function App() {
                   Express.js • iron-session • Prisma •
                   PostgreSQL • TypeScript
                 </p>
-                <div className="flex flex-col justify-around items-center h-32 mt-2 py-4">
-                  <a
-                    href="#"
-                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
-                  >
-                    See the code
-                  </a>
-                  <a
-                    href="#"
-                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
-                  >
-                    Checkout the live version
-                  </a>
-                </div>
+              </div>
+              <div className="flex flex-col justify-around items-center space-y-2 mt-2 py-4">
+                <a
+                  href="#"
+                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                >
+                  See the code
+                </a>
+                <a
+                  href="#"
+                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                >
+                  Checkout the live version
+                </a>
               </div>
             </div>
             {/* Sorting Visualizer */}
-            <div className="border rounded-md sm:col-start-2 sm:col-end-4">
+            <div className="flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-start-2 sm:col-end-4">
               <img
                 src=""
                 alt="Sorting visualizer image"
@@ -514,20 +514,20 @@ function App() {
                 <p className="brightness-75 text-lg">
                   React • Vite • TypeScript
                 </p>
-                <div className="flex flex-col justify-around items-center h-32 mt-2 py-4">
-                  <a
-                    href="#"
-                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
-                  >
-                    See the code
-                  </a>
-                  <a
-                    href="#"
-                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
-                  >
-                    Checkout the live version
-                  </a>
-                </div>
+              </div>
+              <div className="flex flex-col justify-around items-center space-y-2 mt-2 py-4">
+                <a
+                  href="#"
+                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                >
+                  See the code
+                </a>
+                <a
+                  href="#"
+                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                >
+                  Checkout the live version
+                </a>
               </div>
             </div>
           </div>
@@ -596,14 +596,14 @@ function App() {
           <div className="mt-8 flex justify-center sm:justify-between items-center flex-wrap gap-2 sm:gap-0">
             <a
               title="Click to send me an Email"
-              className="transition-colors duration-150 rounded-md px-2 py-1 border hover:text-white hover:bg-neutral-800"
+              className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
               href="#"
             >
               Say hi via an Email
             </a>
             <a
               title="Click to go to my Linkedin profile"
-              className="transition-colors duration-150 rounded-md px-2 py-1 border hover:text-white hover:bg-neutral-800"
+              className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
               href="#"
             >
               Or send me a message in Linkedin
