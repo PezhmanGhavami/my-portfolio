@@ -99,7 +99,9 @@ function App() {
         <a
           href="#intro"
           title="Click to go back to top"
-          className="mr-2"
+          className={`mr-2 rounded-md${
+            openMenu ? " blur-sm pointer-events-none" : ""
+          }`}
         >
           <img
             src="/logo-64x64.webp"
@@ -455,11 +457,21 @@ function App() {
         </section> */}
         {/* Contact */}
         <section ref={contactRef} id="contact">
-          <h2 className={sectionHeadingStyles}>Contact</h2>
+          <h2 className={sectionHeadingStyles}>
+            Get in touch
+          </h2>
           <p>
             If you'd like to build something cool together
             you can contact me through ways listed below
           </p>
+          <div className="mt-4 flex justify-around items-center">
+            <a
+              className="px-2 py-1 border rounded-md"
+              href=""
+            >
+              Send me an email
+            </a>
+          </div>
         </section>
       </main>
     </div>
