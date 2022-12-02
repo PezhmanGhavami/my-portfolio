@@ -213,9 +213,9 @@ function App() {
             <h1 className="text-4xl sm:text-5xl font-medium">
               Hello! I'm Pezhman Ghavami
             </h1>
-            <h2 className="text-2xl sm:text-3xl">
+            <h3 className="text-2xl sm:text-3xl">
               I'm a Full-Stack developer based in iran.
-            </h2>
+            </h3>
           </div>
           <div className="w-36 h-36 sm:w-48 sm:h-48 mb-12 sm:mb-0 flex flex-col justify-between ">
             <img
@@ -418,15 +418,117 @@ function App() {
             Here are some of my personal project that I'm
             currently working on.
           </p>
-          <div className="flex flex-col justify-between items-center mt-8">
-            <div className="w-full h-96 border rounded-md">
-              clothing shop
+          <div className="grid grid-cols-1 sm:grid-cols-4 mt-8 gap-4">
+            {/* Clothing Shop */}
+            <div className="border rounded-md sm:col-span-2">
+              <img
+                src=""
+                alt="Clothing shop image"
+                className="h-44"
+              />
+              <div className="px-3">
+                <h4 className="text-xl">Clothing Shop</h4>
+                <p className="text-base">
+                  This is a prototype e-commerce website,
+                  made with the purpose of being a
+                  playground for trying out different kind
+                  of tech
+                </p>
+                <p className="brightness-75 text-lg">
+                  Next.js • React • Tailwindcss • SWR •
+                  iron-session • Prisma • PostgreSQL •
+                  TypeScript
+                </p>
+                <div className="flex flex-col justify-around items-center h-32 mt-2 py-4">
+                  <a
+                    href="#"
+                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
+                  >
+                    See the code
+                  </a>
+                  <a
+                    href="#"
+                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
+                  >
+                    Checkout the live version
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="w-full h-96 border rounded-md">
-              chat app
+            {/* Chat App */}
+            <div className="border rounded-md sm:col-span-2">
+              <img
+                src=""
+                alt="Chat app image"
+                className="h-44"
+              />
+              <div className="px-2 pb-2">
+                <h4 className="text-xl">Chat App</h4>
+                <p className="text-base">
+                  This is a prototype chat application, like
+                  my other project the purpose of this one
+                  is also testing out different tech but,
+                  with Realtime communications and more App
+                  like behavior
+                </p>
+                <p className="brightness-75 text-lg">
+                  React • Tailwindcss • SWR • Socket.IO •
+                  Express.js • iron-session • Prisma •
+                  PostgreSQL • TypeScript
+                </p>
+                <div className="flex flex-col justify-around items-center h-32 mt-2 py-4">
+                  <a
+                    href="#"
+                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
+                  >
+                    See the code
+                  </a>
+                  <a
+                    href="#"
+                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
+                  >
+                    Checkout the live version
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="w-full h-96 border rounded-md">
-              Sorting visualizer
+            {/* Sorting Visualizer */}
+            <div className="border rounded-md sm:col-start-2 sm:col-end-4">
+              <img
+                src=""
+                alt="Sorting visualizer image"
+                className="h-44"
+              />
+              <div className="px-2 pb-2">
+                <h4 className="text-xl">
+                  Sorting Visualizer
+                </h4>
+                <p className="text-base">
+                  This is an app to visualize different
+                  kinds of sorting algorithms with the
+                  ability to rewind them for better
+                  underestanding of how each algorithm
+                  works. It is also very mesmerising to
+                  watch!
+                </p>
+                <p className="brightness-75 text-lg">
+                  React • Vite • TypeScript
+                </p>
+                <div className="flex flex-col justify-around items-center h-32 mt-2 py-4">
+                  <a
+                    href="#"
+                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
+                  >
+                    See the code
+                  </a>
+                  <a
+                    href="#"
+                    className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border hover:text-white hover:bg-neutral-800"
+                  >
+                    Checkout the live version
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
