@@ -462,14 +462,23 @@ function App() {
           </h2>
           <p>
             If you'd like to build something cool together
-            you can contact me through ways listed below
+            or have any questions, you can contact me
+            through ways listed below:
           </p>
-          <div className="mt-4 flex justify-around items-center">
+          <div className="mt-8 flex justify-center sm:justify-between items-center flex-wrap gap-2 sm:gap-0">
             <a
-              className="px-2 py-1 border rounded-md"
-              href=""
+              title="Click to send me an Email"
+              className="transition-colors duration-150 rounded-md px-2 py-1 border hover:text-white hover:bg-neutral-800"
+              href="#"
             >
-              Send me an email
+              Say hi via an Email
+            </a>
+            <a
+              title="Click to go to my Linkedin profile"
+              className="transition-colors duration-150 rounded-md px-2 py-1 border hover:text-white hover:bg-neutral-800"
+              href="#"
+            >
+              Or send me a message in Linkedin
             </a>
           </div>
         </section>
