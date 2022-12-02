@@ -42,30 +42,42 @@ function App() {
         projectsRef.current?.clientHeight! +
         projectsTriggerPoint +
         48;
-      aboutRef.current?.clientHeight;
-      console.log(globalThis.window.scrollY);
-      console.log(globalThis.window.innerHeight - 32);
 
-      // console.log(aboutTriggerPoint);
-      // console.log(workTriggerPoint);
-      // console.log(projectsTriggerPoint);
-      // console.log(conractTriggerPoint);
       if (
+        globalThis.window.scrollY ===
+        globalThis.document.scrollingElement
+          ?.scrollHeight! -
+          globalThis.document.scrollingElement
+            ?.clientHeight!
+      ) {
+        setIsInAbout(false);
+        setIsInWork(false);
+        setIsInProjects(false);
+        setIsInContact(true);
+      } else if (
         globalThis.window.scrollY >= aboutTriggerPoint! &&
         globalThis.window.scrollY < workTriggerPoint!
       ) {
-        console.log("is in about");
         setIsInAbout(true);
         setIsInWork(false);
         setIsInProjects(false);
         setIsInContact(false);
       } else if (
-        globalThis.window.scrollY >= workTriggerPoint!
+        globalThis.window.scrollY >= workTriggerPoint! &&
+        globalThis.window.scrollY < projectsTriggerPoint!
       ) {
-        console.log("is in work");
         setIsInAbout(false);
         setIsInWork(true);
         setIsInProjects(false);
+        setIsInContact(false);
+      } else if (
+        globalThis.window.scrollY >=
+          projectsTriggerPoint! &&
+        globalThis.window.scrollY < conractTriggerPoint!
+      ) {
+        setIsInAbout(false);
+        setIsInWork(false);
+        setIsInProjects(true);
         setIsInContact(false);
       } else {
         setIsInAbout(false);
@@ -159,7 +171,11 @@ function App() {
             <li
               onClick={closeMenu}
               title="Click to go to the personal projects section"
-              className={navLinkStyles}
+              className={`${navLinkStyles}${
+                isInProjects
+                  ? " text-white font-semibold"
+                  : ""
+              }`}
             >
               <a href="#personal-projects">
                 Perosnal Projects
@@ -168,7 +184,11 @@ function App() {
             <li
               onClick={closeMenu}
               title="Click to go to the contact section"
-              className={navLinkStyles}
+              className={`${navLinkStyles}${
+                isInContact
+                  ? " text-white font-semibold"
+                  : ""
+              }`}
             >
               <a href="#contact">Contact</a>
             </li>
@@ -396,13 +416,19 @@ function App() {
           </h2>
           <p>
             Here are some of my personal project that I'm
-            currently working on; These are like playgrounds
-            so I can checkout different tech and play around
-            with them!
+            currently working on.
           </p>
-          <div>clothing shop</div>
-          <div>chat app</div>
-          <div>sorting visualizer</div>
+          <div className="flex flex-col justify-between items-center mt-8">
+            <div className="w-full h-96 border rounded-md">
+              clothing shop
+            </div>
+            <div className="w-full h-96 border rounded-md">
+              chat app
+            </div>
+            <div className="w-full h-96 border rounded-md">
+              Sorting visualizer
+            </div>
+          </div>
         </section>
         {/* Technical skills */}
         {/* I can mix these with the experience and projects section */}
