@@ -245,25 +245,25 @@ function App() {
           <h2 className={sectionHeadingStyles}>About Me</h2>
           <div className="space-y-2">
             <p>
-              Since the beginning of my journey I have been
+              Since the beginning of my journey, I have been
               passionate about building dynamic, creative
-              products using bleeding edge technologies to
+              products using bleeding-edge technologies to
               deliver intuitive user experiences.
             </p>
             <p>
-              Over the past 5 years I have{" "}
+              Over the past five years, I have{" "}
               <a
                 href="#work-experience"
                 className={anchroTagStyles}
               >
                 worked
               </a>{" "}
-              on a wide variety of projects taking them from
-              ideas to production.
+              on various projects, taking them from ideas to
+              production.
             </p>
             <p>
-              Currently I am iterating over this website and
-              my{" "}
+              Currently, I am iterating over this website
+              and my{" "}
               <a
                 href="#personal-projects"
                 className={anchroTagStyles}
@@ -322,13 +322,13 @@ function App() {
                       trading software
                     </li>
                     <li>
-                      Product performance data
-                      visualization, in the admin panel
+                      Product performance data visualization
+                      in the admin panel
                     </li>
                     <li>
-                      An SSE server for Realtime broadcast
-                      of our trading software's, server
-                      instance events, to the clients
+                      An SSE server for broadcasting our
+                      trading software's server instance
+                      events to the clients
                     </li>
                     <li>
                       A client in the cTrader platform as a
@@ -351,9 +351,9 @@ function App() {
                     2019
                   </p>
                   <p>
-                    Made an internal REST api for
-                    authunticating and managing trading
-                    softwares.
+                    Made an internal REST API for
+                    authenticating and managing our various
+                    trading software.
                   </p>
                   <p className="brightness-75 text-lg">
                     Express.js • JavaScript
@@ -364,7 +364,7 @@ function App() {
                     2018
                   </p>
                   <p>
-                    Made a wordpress e-commerce website.
+                    Made a WordPress e-commerce website.
                   </p>
                   <p className="brightness-75 text-lg">
                     Wordpress
@@ -415,7 +415,7 @@ function App() {
             Personal Projects
           </h2>
           <p>
-            Here are some of my personal project that I'm
+            Here are some of my personal projects that I'm
             currently working on.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-4 mt-8 gap-4">
@@ -430,9 +430,8 @@ function App() {
                 <h4 className="text-xl">Clothing Shop</h4>
                 <p className="text-base">
                   This is a prototype e-commerce website,
-                  made with the purpose of being a
-                  playground for trying out different kind
-                  of tech
+                  made to be a playground for trying out
+                  different kinds of tech
                 </p>
                 <p className="brightness-75 text-lg">
                   Next.js • React • Tailwindcss • SWR •
@@ -465,10 +464,10 @@ function App() {
               <div className="px-2 pb-2">
                 <h4 className="text-xl">Chat App</h4>
                 <p className="text-base">
-                  This is a prototype chat application, like
-                  my other project the purpose of this one
-                  is also testing out different tech but,
-                  with Realtime communications and more App
+                  This is a prototype chat application. Like
+                  my other project, the purpose of this one
+                  is also testing out different tech but
+                  with real-time communications and more App
                   like behavior
                 </p>
                 <p className="brightness-75 text-lg">
@@ -505,11 +504,10 @@ function App() {
                 </h4>
                 <p className="text-base">
                   This is an app to visualize different
-                  kinds of sorting algorithms with the
-                  ability to rewind them for better
-                  underestanding of how each algorithm
-                  works. It is also very mesmerising to
-                  watch!
+                  sorting algorithms with the ability to
+                  rewind them to better understand how each
+                  algorithm works. It is also very
+                  mesmerizing to watch!
                 </p>
                 <p className="brightness-75 text-lg">
                   React • Vite • TypeScript
@@ -589,9 +587,9 @@ function App() {
             Get in touch
           </h2>
           <p>
-            If you'd like to build something cool together
-            or have any questions, you can contact me
-            through ways listed below:
+            If you'd like to build something interesting
+            together or have any questions, you can contact
+            me through the ways listed below:
           </p>
           <div className="mt-8 flex justify-center sm:justify-between items-center flex-wrap gap-2 sm:gap-0">
             <a
@@ -606,7 +604,7 @@ function App() {
               className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
               href="#"
             >
-              Or send me a message in Linkedin
+              Or send me a message on Linkedin
             </a>
           </div>
         </section>
