@@ -421,11 +421,13 @@ function App() {
           <div className="grid grid-cols-1 sm:grid-cols-4 mt-8 gap-4">
             {/* Clothing Shop */}
             <div className="flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-span-2">
-              <img
-                src=""
-                alt="Clothing shop image"
-                className="h-44"
-              />
+              <div className="w-full h-52">
+                <img
+                  src="/app-previews/clothing-shop.png"
+                  alt="Clothing shop image"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <div className="px-3">
                 <h4 className="text-xl">Clothing Shop</h4>
                 <p className="text-base">
@@ -456,11 +458,13 @@ function App() {
             </div>
             {/* Chat App */}
             <div className="flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-span-2">
-              <img
-                src=""
-                alt="Chat app image"
-                className="h-44"
-              />
+              <div className="w-full h-52">
+                <img
+                  src="/app-previews/chat-app.png"
+                  alt="Chat app image"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <div className="px-2 pb-2">
                 <h4 className="text-xl">Chat App</h4>
                 <p className="text-base">
@@ -493,11 +497,13 @@ function App() {
             </div>
             {/* Sorting Visualizer */}
             <div className="flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-start-2 sm:col-end-4">
-              <img
-                src=""
-                alt="Sorting visualizer image"
-                className="h-44"
-              />
+              <div className="w-full h-52">
+                <img
+                  src="/app-previews/sorting-visualizer.png"
+                  alt="Sorting visualizer image"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <div className="px-2 pb-2">
                 <h4 className="text-xl">
                   Sorting Visualizer
