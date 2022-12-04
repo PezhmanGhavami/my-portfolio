@@ -9,6 +9,17 @@ const navLinkStyles =
 const sectionHeadingStyles =
   "text-white text-3xl sm:text-4xl mb-3";
 const anchroTagStyles = "text-blue-400 hover:underline";
+const personalProjectCard = {
+  container:
+    "flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-span-2 px-3 py-6 space-y-6",
+  aboutContainer: "",
+  heading: "text-white text-xl mb-3",
+  description: "text-base",
+  stack: "brightness-75 text-lg mt-1",
+  linkContainer:
+    "flex flex-col justify-around items-center space-y-2",
+  link: "transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800",
+};
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -420,115 +431,139 @@ function App() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-4 mt-8 gap-4">
             {/* Clothing Shop */}
-            <div className="flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-span-2">
-              <div className="w-full h-52">
-                <img
-                  src="/app-previews/clothing-shop.png"
-                  alt="Clothing shop image"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="px-3">
-                <h4 className="text-xl">Clothing Shop</h4>
-                <p className="text-base">
+            <div className={personalProjectCard.container}>
+              <div
+                className={
+                  personalProjectCard.aboutContainer
+                }
+              >
+                <h4 className={personalProjectCard.heading}>
+                  Clothing Shop
+                </h4>
+                <p
+                  className={
+                    personalProjectCard.description
+                  }
+                >
                   This is a prototype e-commerce website,
                   made to be a playground for trying out
                   different kinds of tech
                 </p>
-                <p className="brightness-75 text-lg">
+                <p className={personalProjectCard.stack}>
                   Next.js • React • Tailwindcss • SWR •
                   iron-session • Prisma • PostgreSQL •
                   TypeScript
                 </p>
               </div>
-              <div className="flex flex-col justify-around items-center space-y-2 mt-2 py-4">
+              <div
+                className={
+                  personalProjectCard.linkContainer
+                }
+              >
                 <a
                   href="#"
-                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                  className={personalProjectCard.link}
                 >
                   See the code
                 </a>
                 <a
                   href="#"
-                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                  className={personalProjectCard.link}
                 >
                   Checkout the live version
                 </a>
               </div>
             </div>
             {/* Chat App */}
-            <div className="flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-span-2">
-              <div className="w-full h-52">
-                <img
-                  src="/app-previews/chat-app.png"
-                  alt="Chat app image"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="px-2 pb-2">
-                <h4 className="text-xl">Chat App</h4>
-                <p className="text-base">
+            <div className={personalProjectCard.container}>
+              <div
+                className={
+                  personalProjectCard.aboutContainer
+                }
+              >
+                <h4 className={personalProjectCard.heading}>
+                  Chat App
+                </h4>
+                <p
+                  className={
+                    personalProjectCard.description
+                  }
+                >
                   This is a prototype chat application. Like
                   my other project, the purpose of this one
                   is also testing out different tech but
                   with real-time communications and more App
                   like behavior
                 </p>
-                <p className="brightness-75 text-lg">
+                <p className={personalProjectCard.stack}>
                   React • Tailwindcss • SWR • Socket.IO •
                   Express.js • iron-session • Prisma •
                   PostgreSQL • TypeScript
                 </p>
               </div>
-              <div className="flex flex-col justify-around items-center space-y-2 mt-2 py-4">
+              <div
+                className={
+                  personalProjectCard.linkContainer
+                }
+              >
                 <a
                   href="#"
-                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                  className={personalProjectCard.link}
                 >
                   See the code
                 </a>
                 <a
                   href="#"
-                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                  className={personalProjectCard.link}
                 >
                   Checkout the live version
                 </a>
               </div>
             </div>
             {/* Sorting Visualizer */}
-            <div className="flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-start-2 sm:col-end-4">
-              <div className="w-full h-52">
-                <img
-                  src="/app-previews/sorting-visualizer.png"
-                  alt="Sorting visualizer image"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="px-2 pb-2">
-                <h4 className="text-xl">
+            <div
+              className={
+                personalProjectCard.container +
+                " sm:col-start-2"
+              }
+            >
+              <div
+                className={
+                  personalProjectCard.aboutContainer
+                }
+              >
+                <h4 className={personalProjectCard.heading}>
                   Sorting Visualizer
                 </h4>
-                <p className="text-base">
+                <p
+                  className={
+                    personalProjectCard.description
+                  }
+                >
                   This is an app to visualize different
                   sorting algorithms with the ability to
                   rewind them to better understand how each
                   algorithm works. It is also very
                   mesmerizing to watch!
                 </p>
-                <p className="brightness-75 text-lg">
+                <p className={personalProjectCard.stack}>
                   React • Vite • TypeScript
                 </p>
               </div>
-              <div className="flex flex-col justify-around items-center space-y-2 mt-2 py-4">
+              <div
+                className={
+                  personalProjectCard.linkContainer
+                }
+              >
                 <a
                   href="#"
-                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                  className={personalProjectCard.link}
                 >
                   See the code
                 </a>
                 <a
                   href="#"
-                  className="transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+                  className={personalProjectCard.link}
                 >
                   Checkout the live version
                 </a>
