@@ -358,9 +358,7 @@ function App() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-base brightness-90">
-                    2019
-                  </p>
+                  <p className="brightness-90">2019</p>
                   <p>
                     Made an internal REST API for
                     authenticating and managing our various
@@ -371,9 +369,7 @@ function App() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-base brightness-90">
-                    2018
-                  </p>
+                  <p className="brightness-90">2018</p>
                   <p>
                     Made a WordPress e-commerce website.
                   </p>
@@ -382,9 +378,7 @@ function App() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-base brightness-90">
-                    2017-2022
-                  </p>
+                  <p className="brightness-90">2017-2022</p>
                   <p>
                     Closely collaborated with the trading
                     team to turn their strategies into
@@ -396,9 +390,7 @@ function App() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-base brightness-90">
-                    2017-2022
-                  </p>
+                  <p className="brightness-90">2017-2022</p>
 
                   <p>
                     Made several telegram bots for
@@ -467,7 +459,8 @@ function App() {
                   See the code
                 </a>
                 <a
-                  href="#"
+                  href="https://clothingshop.pezhmanghavami.com"
+                  target="_blank"
                   className={personalProjectCard.link}
                 >
                   Checkout the live version
@@ -513,7 +506,8 @@ function App() {
                   See the code
                 </a>
                 <a
-                  href="#"
+                  href="https://chatapp.pezhmanghavami.com"
+                  target="_blank"
                   className={personalProjectCard.link}
                 >
                   Checkout the live version
@@ -562,7 +556,8 @@ function App() {
                   See the code
                 </a>
                 <a
-                  href="#"
+                  href="https://sortingvisualizer.pezhmanghavami.com"
+                  target="_blank"
                   className={personalProjectCard.link}
                 >
                   Checkout the live version
