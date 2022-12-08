@@ -235,10 +235,18 @@ function App() {
               >
                 <GithubLogo className="w-7 h-7 transition-colors duration-150 hover:text-white/70" />
               </a>
-              <a href="#">
+              <a
+                title="Click to visit my linkedin"
+                target="_blank"
+                href="https://www.linkedin.com/in/pezhman-ghavami"
+              >
                 <LinkedInLogo className="w-6 h-6 transition-colors duration-150 hover:text-white/70" />
               </a>
-              <a href="#">
+              <a
+                title="Click to send me an email"
+                target="_blank"
+                href="mailto:mail@pezhmanghavami.com"
+              >
                 <EmailLogo className="w-7 h-7 transition-colors duration-150 hover:text-white/70" />
               </a>
             </div>
@@ -434,9 +442,9 @@ function App() {
                     personalProjectCard.description
                   }
                 >
-                  This is a prototype e-commerce website,
-                  made to be a playground for trying out
-                  different kinds of tech
+                  An e-commerce prototype website, made to
+                  be a playground for trying out different
+                  kinds of tech
                 </p>
                 <p className={personalProjectCard.stack}>
                   Next.js • React • Tailwindcss • SWR •
@@ -572,57 +580,6 @@ function App() {
             </div>
           </div>
         </section>
-        {/* Technical skills */}
-        {/* I can mix these with the experience and projects section */}
-        {/* <section>
-          <h2>
-            Here are some of my favourite technologes that
-            i'm currently using
-          </h2>
-          <ul>
-            <li>Typescript</li>
-            <li>React</li>
-            <li>Astro</li>
-            <li>NextJs</li>
-            <li>SWR</li>
-            <li>Zustand</li>
-            <li>React Router</li>
-            <li>Next Auth</li>
-            <li>Iron session</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Sass</li>
-            <li>Tailwindcss</li>
-            <li>Vite</li>
-            <li>Prisma</li>
-            <li>PostgreSQL</li>
-            <li>Expressjs</li>
-            <li>Socket.io</li>
-            <li>Nodejs</li>
-            <li>Jest</li>
-            <li>Cypress</li>
-          </ul>
-          <h2>Technologies that I have worked with</h2>
-          <ul>
-            <li>Javascript</li>
-            <li>Redux Toolkit</li>
-            <li>React Query (TanStack Query)</li>
-            <li>tRPC</li>
-            <li>Firebase</li>
-            <li>Apollo client react</li>
-            <li>Styled Components</li>
-            <li>Electron</li>
-            <li>Mongodb</li>
-            <li>SQLite</li>
-            <li>Redis</li>
-            <li>Koa</li>
-            <li>ws</li>
-            <li>D3.js</li>
-            <li>Webpack</li>
-            <li>Docker</li>
-            <li>C#</li>
-          </ul>
-        </section> */}
         {/* Contact */}
         <section ref={contactRef} id="contact">
           <h2 className={sectionHeadingStyles}>
@@ -637,14 +594,14 @@ function App() {
             <a
               title="Click to send me an Email"
               className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
-              href="#"
+              href="mailto:mail@pezhmanghavami.com"
             >
               Say hi via an Email
             </a>
             <a
               title="Click to go to my Linkedin profile"
               className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
-              href="#"
+              href="https://www.linkedin.com/in/pezhman-ghavami"
             >
               Or send me a message on Linkedin
             </a>
