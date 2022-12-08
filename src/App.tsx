@@ -148,7 +148,7 @@ function App() {
         </div>
         {/* Nav links and resume button */}
         <nav
-          className={`flex-1 flex flex-col sm:flex-row justify-evenly sm:justify-between absolute z-20 sm:static top-0 right-0 h-screen w-2/3 sm:h-auto translate-x-full sm:translate-x-0 transition-transform duration-150 bg-neutral-800 sm:bg-transparent px-12 sm:px-0 text-center text-lg sm:text-base${
+          className={`flex-1 flex flex-col sm:flex-row justify-evenly sm:justify-between absolute z-20 sm:static top-0 right-0 h-screen w-2/3 sm:h-auto translate-x-full sm:translate-x-0 transition-transform duration-150 bg-neutral-800 sm:bg-transparent px-10 sm:px-0 text-center text-lg sm:text-base${
             openMenu ? " translate-x-0" : ""
           }`}
         >
