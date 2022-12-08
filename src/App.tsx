@@ -50,21 +50,14 @@ function App() {
         workTriggerPoint +
         48;
       const conractTriggerPoint =
-        projectsRef.current?.clientHeight! +
-        projectsTriggerPoint +
-        48;
+        globalThis.document.documentElement.scrollHeight -
+        globalThis.document.documentElement.clientHeight;
 
-      if (
-        globalThis.window.scrollY ===
-        globalThis.document.scrollingElement
-          ?.scrollHeight! -
-          globalThis.document.scrollingElement
-            ?.clientHeight!
-      ) {
+      if (globalThis.window.scrollY < aboutTriggerPoint!) {
         setIsInAbout(false);
         setIsInWork(false);
         setIsInProjects(false);
-        setIsInContact(true);
+        setIsInContact(false);
       } else if (
         globalThis.window.scrollY >= aboutTriggerPoint! &&
         globalThis.window.scrollY < workTriggerPoint!
@@ -94,7 +87,7 @@ function App() {
         setIsInAbout(false);
         setIsInWork(false);
         setIsInProjects(false);
-        setIsInContact(false);
+        setIsInContact(true);
       }
     };
     globalThis.document.addEventListener(
@@ -155,7 +148,7 @@ function App() {
         </div>
         {/* Nav links and resume button */}
         <nav
-          className={`flex-1 flex flex-col sm:flex-row justify-evenly sm:justify-between absolute z-20 sm:static top-0 right-0 h-screen w-2/3 sm:h-auto translate-x-full sm:translate-x-0 transition-transform duration-150 bg-neutral-800 sm:bg-transparent px-12 sm:px-0 text-lg sm:text-base${
+          className={`flex-1 flex flex-col sm:flex-row justify-evenly sm:justify-between absolute z-20 sm:static top-0 right-0 h-screen w-2/3 sm:h-auto translate-x-full sm:translate-x-0 transition-transform duration-150 bg-neutral-800 sm:bg-transparent px-12 sm:px-0 text-center text-lg sm:text-base${
             openMenu ? " translate-x-0" : ""
           }`}
         >
