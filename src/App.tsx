@@ -262,7 +262,7 @@ function App() {
               deliver intuitive user experiences.
             </p>
             <p>
-              Over the past five years, I have{" "}
+              Over the past four years, I have{" "}
               <a
                 href="#work-experience"
                 className={anchroTagStyles}
@@ -301,11 +301,11 @@ function App() {
           <h2 className={sectionHeadingStyles}>
             Work Experience
           </h2>
-          <div className="sm:grid grid-cols-4">
+          <div>
             <p className="flex-1 w-fit col-span-1 brightness-90">
-              2017-2022
+              May 2017- February 2022
             </p>
-            <div className="col-span-3 space-y-2">
+            <div className="space-y-2">
               <a
                 className={anchroTagStyles}
                 href="https://rayabot.com/"
@@ -489,9 +489,9 @@ function App() {
                   like behavior
                 </p>
                 <p className={personalProjectCard.stack}>
-                  React • Tailwindcss • SWR • Socket.IO •
-                  Express.js • iron-session • Prisma •
-                  PostgreSQL • TypeScript
+                  React • Tailwindcss • SWR • React Router •
+                  Socket.IO • Express.js • iron-session •
+                  Prisma • PostgreSQL • TypeScript
                 </p>
               </div>
               <div
