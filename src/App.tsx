@@ -228,13 +228,17 @@ function App() {
               alt="My-photo"
             />
             <div className="flex justify-evenly items-center text-white">
-              <a href="">
+              <a
+                title="Click to visit my github"
+                target="_blank"
+                href="https://github.com/pezhmanghavami"
+              >
                 <GithubLogo className="w-7 h-7 transition-colors duration-150 hover:text-white/70" />
               </a>
-              <a href="">
+              <a href="#">
                 <LinkedInLogo className="w-6 h-6 transition-colors duration-150 hover:text-white/70" />
               </a>
-              <a href="">
+              <a href="#">
                 <EmailLogo className="w-7 h-7 transition-colors duration-150 hover:text-white/70" />
               </a>
             </div>
@@ -446,12 +450,15 @@ function App() {
                 }
               >
                 <a
-                  href="#"
+                  title="Click to go to the repository"
+                  href="https://github.com/pezhmanghavami/clothing-shop"
+                  target="_blank"
                   className={personalProjectCard.link}
                 >
                   See the code
                 </a>
                 <a
+                  title="Click to open the live version"
                   href="https://clothingshop.pezhmanghavami.com"
                   target="_blank"
                   className={personalProjectCard.link}
@@ -493,12 +500,15 @@ function App() {
                 }
               >
                 <a
-                  href="#"
+                  title="Click to go to the repository"
+                  href="https://github.com/pezhmanghavami/chat-app"
+                  target="_blank"
                   className={personalProjectCard.link}
                 >
                   See the code
                 </a>
                 <a
+                  title="Click to open the live version"
                   href="https://chatapp.pezhmanghavami.com"
                   target="_blank"
                   className={personalProjectCard.link}
@@ -543,12 +553,15 @@ function App() {
                 }
               >
                 <a
-                  href="#"
+                  title="Click to go to the repository"
+                  href="https://github.com/pezhmanghavami/sorting-visualizer"
+                  target="_blank"
                   className={personalProjectCard.link}
                 >
                   See the code
                 </a>
                 <a
+                  title="Click to open the live version"
                   href="https://sortingvisualizer.pezhmanghavami.com"
                   target="_blank"
                   className={personalProjectCard.link}
