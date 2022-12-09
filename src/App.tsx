@@ -238,7 +238,7 @@ function App() {
               <a
                 title="Click to visit my linkedin"
                 target="_blank"
-                href="https://www.linkedin.com/in/pezhman-ghavami"
+                href="https://www.linkedin.com/in/pezhmanghavami"
               >
                 <LinkedInLogo className="w-6 h-6 transition-colors duration-150 hover:text-white/70" />
               </a>
@@ -379,7 +379,7 @@ function App() {
                     Made a WordPress e-commerce website.
                   </p>
                   <p className="brightness-75 text-lg">
-                    Wordpress
+                    WordPress
                   </p>
                 </div>
                 <div>
@@ -545,11 +545,11 @@ function App() {
                     personalProjectCard.description
                   }
                 >
-                  This is an app to visualize different
-                  sorting algorithms with the ability to
-                  rewind them to better understand how each
-                  algorithm works. It is also very
-                  mesmerizing to watch!
+                  An app to visualize different sorting
+                  algorithms with the ability to rewind them
+                  to better understand how each algorithm
+                  works. It is also very mesmerizing to
+                  watch!
                 </p>
                 <p className={personalProjectCard.stack}>
                   React • Vite • TypeScript
@@ -601,7 +601,7 @@ function App() {
             <a
               title="Click to go to my Linkedin profile"
               className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
-              href="https://www.linkedin.com/in/pezhman-ghavami"
+              href="https://www.linkedin.com/in/pezhmanghavami"
             >
               Or send me a message on Linkedin
             </a>
