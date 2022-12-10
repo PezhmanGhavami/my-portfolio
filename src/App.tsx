@@ -219,7 +219,7 @@ function App() {
               Hello! I'm Pezhman Ghavami
             </h1>
             <h3 className="text-2xl sm:text-3xl">
-              I'm a Full-Stack developer based in iran.
+              I'm a Front-End engineer based in iran.
             </h3>
           </div>
           <div className="w-36 h-36 sm:w-48 sm:h-48 mb-12 sm:mb-0 flex flex-col justify-between ">
