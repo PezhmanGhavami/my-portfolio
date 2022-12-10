@@ -197,13 +197,14 @@ function App() {
               <a href="#contact">Contact</a>
             </li>
           </ul>
-          <button
-            type="button"
+          <a
+            href="/resume.pdf"
+            target="_blank"
             title="Click to download my resume"
             className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
           >
             Resume
-          </button>
+          </a>
         </nav>
       </header>
       <main className="mx-auto w-11/12 max-w-2xl space-y-12 my-28 text-lg">
@@ -307,7 +308,7 @@ function App() {
             Work Experience
           </h2>
           <div>
-            <p className="flex-1 w-fit col-span-1 brightness-90">
+            <p className="flex-1 w-fit brightness-90">
               May 2017- February 2022
             </p>
             <div className="space-y-2">
@@ -356,10 +357,10 @@ function App() {
                     </li>
                   </ul>
                   <p className="brightness-75 text-lg">
-                    React • Redux-Toolkit • Sass • Styled
-                    Components • D3.js • Electron •
-                    Express.js • PostgreSQL • Redis •
-                    JavaScript • C# • cAlgo • MQL5
+                    React • Redux-Toolkit • React Router •
+                    Sass • Styled Components • D3.js •
+                    Electron • Express.js • PostgreSQL •
+                    Redis • JavaScript • C# • cAlgo • MQL5
                   </p>
                 </div>
                 <div>
@@ -498,8 +499,9 @@ function App() {
                 </p>
                 <p className={personalProjectCard.stack}>
                   React • Tailwindcss • SWR • React Router •
-                  Socket.IO • Express.js • iron-session •
-                  Prisma • PostgreSQL • TypeScript
+                  Vite • Socket.IO • Express.js •
+                  iron-session • Prisma • PostgreSQL •
+                  TypeScript
                 </p>
               </div>
               <div
