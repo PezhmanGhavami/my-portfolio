@@ -219,7 +219,8 @@ function App() {
               Hello! I'm Pezhman Ghavami
             </h1>
             <h3 className="text-2xl sm:text-3xl">
-              I'm a Front-End engineer based in iran.
+              I'm an Expert Front-End engineer with a strong
+              passion for the bleeding-edge.
             </h3>
           </div>
           <div className="w-36 h-36 sm:w-48 sm:h-48 mb-12 sm:mb-0 flex flex-col justify-between ">
@@ -264,7 +265,7 @@ function App() {
             <p>
               Since the beginning of my journey, I have been
               passionate about building dynamic, creative
-              products using bleeding-edge technologies to
+              products using the latest technologies to
               deliver intuitive user experiences.
             </p>
             <p>
