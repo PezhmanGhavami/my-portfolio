@@ -92,12 +92,12 @@ function App() {
     };
     globalThis.document.addEventListener(
       "scroll",
-      handleScroll
+      handleScroll,
     );
     return () => {
       globalThis.document.removeEventListener(
         "scroll",
-        handleScroll
+        handleScroll,
       );
     };
   }, []);
@@ -107,16 +107,16 @@ function App() {
       {openMenu && (
         <div
           onClick={closeMenu}
-          className="fixed z-10 w-screen h-screen inset-0 bg-neutral-900/10 backdrop-blur-sm"
+          className="fixed inset-0 z-10 h-screen w-screen bg-neutral-900/10 backdrop-blur-sm"
         />
       )}
-      <header className="fixed inset-x-0 z-30 top-0 bg-neutral-900/95 backdrop-blur-sm shadow-lg mx-auto max-w-2xl flex justify-between sm:justify-start items-center pr-3 sm:p-0">
+      <header className="fixed inset-x-0 top-0 z-30 mx-auto flex max-w-2xl items-center justify-between bg-neutral-900/95 pr-3 shadow-lg backdrop-blur-sm sm:justify-start sm:p-0">
         {/* Logo */}
         <a
           href="#intro"
           title="Click to go back to top"
           className={`mr-2 rounded-md${
-            openMenu ? " blur-sm pointer-events-none" : ""
+            openMenu ? " pointer-events-none blur-sm" : ""
           }`}
         >
           <img
@@ -127,12 +127,12 @@ function App() {
         {/* Menu button */}
         <div
           onClick={toggleMenu}
-          className={`sm:hidden z-40 flex flex-col justify-center items-center w-8 h-8 p-1 space-y-1 bg-neutral-700 rounded-md transition${
+          className={`z-40 flex h-8 w-8 flex-col items-center justify-center space-y-1 rounded-md bg-neutral-700 p-1 sm:hidden transition${
             openMenu ? " ring-2 ring-neutral-400" : ""
           }`}
         >
           <div
-            className={`w-full h-[2px] transition ${
+            className={`h-[2px] w-full transition ${
               openMenu
                 ? "translate-y-[0.2rem] -rotate-45 bg-white"
                 : "bg-neutral-300"
@@ -142,22 +142,22 @@ function App() {
             className={`h-[2px] transition ${
               openMenu
                 ? "w-full -translate-y-[0.2rem] rotate-45 bg-white"
-                : "bg-neutral-300 w-4/6 self-end"
+                : "w-4/6 self-end bg-neutral-300"
             }`}
           />
         </div>
         {/* Nav links and resume button */}
         <nav
-          className={`flex-1 flex flex-col sm:flex-row justify-evenly sm:justify-between absolute z-20 sm:static top-0 right-0 h-screen w-2/3 sm:h-auto translate-x-full sm:translate-x-0 transition-transform duration-150 bg-neutral-800 sm:bg-transparent px-10 sm:px-0 text-center text-lg sm:text-base${
+          className={`absolute top-0 right-0 z-20 flex h-screen w-2/3 flex-1 translate-x-full flex-col justify-evenly bg-neutral-800 px-10 text-center text-lg transition-transform duration-150 sm:static sm:h-auto sm:translate-x-0 sm:flex-row sm:justify-between sm:bg-transparent sm:px-0 sm:text-base${
             openMenu ? " translate-x-0" : ""
           }`}
         >
-          <ul className="flex flex-col sm:flex-row justify-center items-center h-2/3">
+          <ul className="flex h-2/3 flex-col items-center justify-center sm:flex-row">
             <li
               onClick={closeMenu}
               title="Click to go to the about section"
               className={`${navLinkStyles}${
-                isInAbout ? " text-white font-semibold" : ""
+                isInAbout ? " font-semibold text-white" : ""
               }`}
             >
               {" "}
@@ -167,7 +167,7 @@ function App() {
               onClick={closeMenu}
               title="Click to go to the work experience section"
               className={`${navLinkStyles}${
-                isInWork ? " text-white font-semibold" : ""
+                isInWork ? " font-semibold text-white" : ""
               }`}
             >
               <a href="#work-experience">Work Experience</a>
@@ -177,7 +177,7 @@ function App() {
               title="Click to go to the personal projects section"
               className={`${navLinkStyles}${
                 isInProjects
-                  ? " text-white font-semibold"
+                  ? " font-semibold text-white"
                   : ""
               }`}
             >
@@ -190,7 +190,7 @@ function App() {
               title="Click to go to the contact section"
               className={`${navLinkStyles}${
                 isInContact
-                  ? " text-white font-semibold"
+                  ? " font-semibold text-white"
                   : ""
               }`}
             >
@@ -201,21 +201,21 @@ function App() {
             href="/resume.pdf"
             target="_blank"
             title="Click to download my resume"
-            className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+            className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-150 hover:bg-neutral-800 hover:text-white"
           >
             Resume
           </a>
         </nav>
       </header>
-      <main className="mx-auto w-11/12 max-w-2xl space-y-12 my-28 text-lg">
+      <main className="mx-auto my-28 w-11/12 max-w-2xl space-y-12 text-lg">
         {/* Intro */}
         <section
           id="intro"
-          className="flex flex-col-reverse sm:flex-row sm:justify-between items-center text-white text-center sm:text-left scroll-m-16"
+          className="flex scroll-m-16 flex-col-reverse items-center text-center text-white sm:flex-row sm:justify-between sm:text-left"
         >
           {/* INTRO (ALSO HAS CONTACT) */}
           <div className="space-y-4 sm:mr-6">
-            <h1 className="text-4xl sm:text-5xl font-medium">
+            <h1 className="text-4xl font-medium sm:text-5xl">
               Hello! I'm Pezhman Ghavami
             </h1>
             <h3 className="text-2xl sm:text-3xl">
@@ -223,33 +223,33 @@ function App() {
               passion for the bleeding-edge.
             </h3>
           </div>
-          <div className="w-36 h-36 sm:w-48 sm:h-48 mb-12 sm:mb-0 flex flex-col justify-between ">
+          <div className="mb-12 flex h-36 w-36 flex-col justify-between sm:mb-0 sm:h-48 sm:w-48 ">
             <img
               className="rounded-full"
               src="/my-headshot.webp"
               alt="My-photo"
             />
-            <div className="flex justify-evenly items-center text-white">
+            <div className="flex items-center justify-evenly text-white">
               <a
                 title="Click to visit my github"
                 target="_blank"
                 href="https://github.com/pezhmanghavami"
               >
-                <GithubLogo className="w-7 h-7 transition-colors duration-150 hover:text-white/70" />
+                <GithubLogo className="h-7 w-7 transition-colors duration-150 hover:text-white/70" />
               </a>
               <a
                 title="Click to visit my linkedin"
                 target="_blank"
                 href="https://www.linkedin.com/in/pezhmanghavami"
               >
-                <LinkedInLogo className="w-6 h-6 transition-colors duration-150 hover:text-white/70" />
+                <LinkedInLogo className="h-6 w-6 transition-colors duration-150 hover:text-white/70" />
               </a>
               <a
                 title="Click to send me an email"
                 target="_blank"
                 href="mailto:mail@pezhmanghavami.com"
               >
-                <EmailLogo className="w-7 h-7 transition-colors duration-150 hover:text-white/70" />
+                <EmailLogo className="h-7 w-7 transition-colors duration-150 hover:text-white/70" />
               </a>
             </div>
           </div>
@@ -309,7 +309,7 @@ function App() {
             Work Experience
           </h2>
           <div>
-            <p className="flex-1 w-fit brightness-90">
+            <p className="w-fit flex-1 brightness-90">
               May 2017- February 2022
             </p>
             <div className="space-y-2">
@@ -329,7 +329,7 @@ function App() {
                     designers to build a SaaS product which
                     included:
                   </p>
-                  <ul className="list-disc list-inside">
+                  <ul className="list-inside list-disc">
                     <li>
                       A user control panel for managing
                       subscriptions
@@ -357,7 +357,7 @@ function App() {
                       bridge client for MetaTrader
                     </li>
                   </ul>
-                  <p className="brightness-75 text-lg">
+                  <p className="text-lg brightness-75">
                     React • Redux-Toolkit • React Router •
                     Sass • Styled Components • D3.js •
                     Electron • Express.js • PostgreSQL •
@@ -371,7 +371,7 @@ function App() {
                     authenticating and managing our various
                     trading software.
                   </p>
-                  <p className="brightness-75 text-lg">
+                  <p className="text-lg brightness-75">
                     Express.js • JavaScript
                   </p>
                 </div>
@@ -380,7 +380,7 @@ function App() {
                   <p>
                     Made a WordPress e-commerce website.
                   </p>
-                  <p className="brightness-75 text-lg">
+                  <p className="text-lg brightness-75">
                     WordPress
                   </p>
                 </div>
@@ -392,7 +392,7 @@ function App() {
                     indicators and automated trading
                     solutions in the cAlgo platform.
                   </p>
-                  <p className="brightness-75 text-lg">
+                  <p className="text-lg brightness-75">
                     cAlgo • C#
                   </p>
                 </div>
@@ -406,7 +406,7 @@ function App() {
                     monitoring different trading software
                     statuses.
                   </p>
-                  <p className="brightness-75 text-lg">
+                  <p className="text-lg brightness-75">
                     Node.js • Prisma • SQLite • JavaScript •
                     TypeScript
                   </p>
@@ -428,7 +428,7 @@ function App() {
             Here are some of my personal projects that I'm
             currently working on.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-4 mt-8 gap-4">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-4">
             {/* Clothing Shop */}
             <div className={personalProjectCard.container}>
               <div
@@ -593,17 +593,17 @@ function App() {
             together or have any questions, you can contact
             me through the ways listed below:
           </p>
-          <div className="mt-8 flex justify-center sm:justify-between items-center flex-wrap gap-2 sm:gap-0">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:justify-between sm:gap-0">
             <a
               title="Click to send me an Email"
-              className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+              className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-150 hover:bg-neutral-800 hover:text-white"
               href="mailto:mail@pezhmanghavami.com"
             >
               Say hi via an Email
             </a>
             <a
               title="Click to go to my Linkedin profile"
-              className="transition-colors duration-150 rounded-md px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800"
+              className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-150 hover:bg-neutral-800 hover:text-white"
               href="https://www.linkedin.com/in/pezhmanghavami"
             >
               Or send me a message on Linkedin
