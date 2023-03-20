@@ -5,20 +5,165 @@ import { ReactComponent as GithubLogo } from "./assets/social-logos/github.svg";
 import { ReactComponent as LinkedInLogo } from "./assets/social-logos/linkedin.svg";
 
 const navLinkStyles =
-  "transition-colors duration-150 hover:text-white hover:bg-neutral-800 px-2 py-1 rounded-md";
+  "transition-colors duration-300 hover:text-white hover:bg-neutral-800 px-2 py-1 rounded-md";
 const sectionHeadingStyles =
   "text-white text-3xl sm:text-4xl mb-3";
-const anchroTagStyles = "text-blue-400 hover:underline";
-const personalProjectCard = {
-  container:
-    "flex flex-col justify-between items-center border border-neutral-600 rounded-md sm:col-span-2 px-3 py-6 space-y-6",
-  aboutContainer: "",
-  heading: "text-white text-xl mb-3",
-  description: "text-base",
-  stack: "brightness-75 text-lg mt-1",
-  linkContainer:
-    "flex flex-col justify-around items-center space-y-2",
-  link: "transition-colors duration-150 rounded-md w-fit px-2 py-1 border border-neutral-600 hover:text-white hover:bg-neutral-800",
+
+const personalProjectsData = [
+  {
+    id: 1,
+    imageURL: "/mockups/clothing-shop-mockup.png",
+    imageAlt: "Clothing Shop preview",
+    name: "Clothing Shop",
+    description:
+      "An e-commerce prototype website, made to be a playground for trying out different kinds of tech. This website utilizes the best practices of Next.js such as SSG and ISR while taking advantage of the next image and next head modules to deliver lightning fast load times and amazing SEO.",
+    techStack:
+      "Next.js • React • Tailwind CSS • SWR • iron-session • Prisma • PostgreSQL • TypeScript",
+    githubURL:
+      "https://github.com/PezhmanGhavami/clothing-shop",
+    liveURL: "https://clothingshop.pezhmanghavami.com",
+  },
+  {
+    id: 2,
+    imageURL: "/mockups/chat-app-mockup.png",
+    imageAlt: "Chat App preview",
+    name: "Chat App",
+    description:
+      "This is a prototype chat application. Like my other project, the purpose of this one is also testing out different tech but with real-time communications and more App like behavior.",
+    techStack:
+      "React • Tailwind CSS • SWR • React Router • Vite • Socket.IO • Express.js • iron-session • Prisma • PostgreSQL • TypeScript",
+    githubURL: "https://github.com/PezhmanGhavami/chat-app",
+    liveURL: "https://chatapp.pezhmanghavami.com",
+  },
+  {
+    id: 3,
+    imageURL: "/mockups/sorting-visualizer-mockup.png",
+    imageAlt: "Sorting Visualizer preview",
+    name: "Sorting Visualizer",
+    description:
+      "An app to visualize different sorting algorithms with the ability to rewind them to better understand how each algorithm works. Since there are a lot of re-renderings happening, optimization was an important aspect of development, by leveraging the useMemo and useCallback hooks I managed to create smoother re-renders, specially when rewinding through the results.",
+    techStack: "React • Vite • TypeScript",
+    githubURL:
+      "https://github.com/PezhmanGhavami/sorting-visualizer",
+    liveURL: "https://sortingvisualizer.pezhmanghavami.com",
+  },
+];
+
+const workExperiencesData = [
+  {
+    id: 2,
+    duration: "February 2022 - March 2023",
+    jobTitle: "Career Break | Medical leave",
+    highlights: [
+      "Took a break due to a medical condition that has now been completely resolved. Recovered to full health and available for full-time employment.",
+      "Started and completed three Personal Projects to keep my skills fresh and have a playground for trying out different tech.",
+      "Kept myself updated with the industry trends and further developed my skills as a Web Developer by learning and trying out libraries like tRPC, Zustand and Cypress.",
+    ],
+    techUsed: "",
+  },
+  {
+    id: 1,
+    duration: "May 2017 - February 2022",
+    jobTitle: "Full-Stack Developer & Co-Founder | Rayabot",
+    highlights: [
+      "Led a team of 4 developers in collaboration with a UI/UX designer to develop and launch a SaaS product that led to a 150% increase in yearly revenue and a %1000 increase in the active user base that year.",
+      "Built and deployed an SSE API to broadcast events of our trading software using Express.js.",
+      "Built an Admin dashboard for managing users, the SSE server events, and the consuming clients subscribed to that server using React.",
+      "By Visualizing the trade log of our automated trading software using D3.js, I helped the trading team to improve trade accuracy by 50%, lower maximum equity drawdown by 20%, and increase yearly profits by 6%.",
+      "Achieved 100% test coverage by writing unit tests using Jest for the Admin and User dashboards.",
+      "Participated in the development of an Electron.js app's UI using React.",
+      "Closely collaborated and communicated with the trading team to turn their strategies into indicators and automated trading solutions in the cTrader platform and TradingView.",
+      "Maintained our various trading softwares and indicators.",
+      "Designed and developed a server and client version of our automated trading software to broadcast and consume its events through an SSE API in the cTrader platform.",
+      "Made several telegram bots to broadcast indicator signals, deliver trade notifications, and monitor different trading software statuses.",
+      "By optimizing our main trading bot, I made the algorithm run 40% faster, which resulted in quicker backtests and improved productivity.",
+      "Improved performance of our primary indicator and made its initial calculation go from O(n^2) to O(n), drastically cutting draw time.",
+      "Made a WordPress e-commerce website that helped increase our sales by 60%.",
+    ],
+    techUsed:
+      "React • Redux-Toolkit • React Router • Sass • Styled Components • D3.js • Electron • Express.js • Jest • Prisma • PostgreSQL • SQLite • Redis • MongoDB • JavaScript • TypeScript • WordPress • C# • cAlgo • MQL5 • Pine Script",
+  },
+];
+
+type personalProjectData = (typeof personalProjectsData)[0];
+type workExperienceData = (typeof workExperiencesData)[0];
+
+const WorkExperience = ({
+  data,
+}: {
+  data: workExperienceData;
+}) => {
+  return (
+    <div>
+      <p className="w-fit flex-1 brightness-90">
+        {data.duration}
+      </p>
+      <div className="space-y-2">
+        <p className="text-blue-400">{data.jobTitle}</p>
+
+        <div className="space-y-3 text-base">
+          <ul>
+            {data.highlights.map((highlight, index) => (
+              <li
+                className="list-inside list-disc"
+                key={index}
+              >
+                {highlight}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1 text-lg brightness-75">
+            {data.techUsed}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const PersonalProjectCard = ({
+  data,
+}: {
+  data: personalProjectData;
+}) => {
+  return (
+    <div className="flex flex-col items-center justify-between overflow-hidden rounded-md border border-neutral-600 sm:col-span-2 last-of-type:sm:col-start-2">
+      <div className="space-y-4">
+        <img
+          src={data.imageURL}
+          alt={data.imageAlt}
+          className="aspect-square w-full bg-gray-600"
+        />
+        <div className="px-3">
+          <h4 className="mb-3 text-xl text-white">
+            {data.name}
+          </h4>
+          <p className="text-base">{data.description}</p>
+          <p className="mt-1 text-lg brightness-75">
+            {data.techStack}
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-around space-y-2 py-6">
+        <a
+          title="Click to go to the repository"
+          href={data.githubURL}
+          target="_blank"
+          className="w-fit rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
+        >
+          See the code
+        </a>
+        <a
+          title="Click to open the live version"
+          href={data.liveURL}
+          target="_blank"
+          className="w-fit rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
+        >
+          Checkout the live version
+        </a>
+      </div>
+    </div>
+  );
 };
 
 function App() {
@@ -49,7 +194,7 @@ function App() {
         workRef.current?.clientHeight! +
         workTriggerPoint +
         48;
-      const conractTriggerPoint =
+      const contactTriggerPoint =
         globalThis.document.documentElement.scrollHeight -
         globalThis.document.documentElement.clientHeight;
 
@@ -77,7 +222,7 @@ function App() {
       } else if (
         globalThis.window.scrollY >=
           projectsTriggerPoint! &&
-        globalThis.window.scrollY < conractTriggerPoint!
+        globalThis.window.scrollY < contactTriggerPoint!
       ) {
         setIsInAbout(false);
         setIsInWork(false);
@@ -110,36 +255,33 @@ function App() {
           className="fixed inset-0 z-10 h-screen w-screen bg-neutral-900/10 backdrop-blur-sm"
         />
       )}
-      <header className="fixed inset-x-0 top-0 z-30 mx-auto flex max-w-2xl items-center justify-between bg-neutral-900/95 pr-3 shadow-lg backdrop-blur-sm sm:justify-start sm:p-0">
+      <header className="fixed inset-x-0 top-0 z-30 mx-auto flex max-w-3xl items-center justify-between bg-neutral-900/95 pr-3 shadow-lg backdrop-blur-sm sm:justify-start lg:p-0">
         {/* Logo */}
         <a
           href="#intro"
           title="Click to go back to top"
-          className={`mr-2 rounded-md${
+          className={`m-2 rounded-md text-4xl font-medium text-blue-400${
             openMenu ? " pointer-events-none blur-sm" : ""
           }`}
         >
-          <img
-            src="/logo-64x64.webp"
-            alt="Home | Pezhman Ghavami"
-          />
+          PG
         </a>
         {/* Menu button */}
         <div
           onClick={toggleMenu}
-          className={`z-40 flex h-8 w-8 flex-col items-center justify-center space-y-1 rounded-md bg-neutral-700 p-1 sm:hidden transition${
+          className={`z-40 flex h-8 w-8 flex-col items-center justify-center space-y-1 rounded-md bg-neutral-700 p-1 transition sm:hidden duration-300${
             openMenu ? " ring-2 ring-neutral-400" : ""
           }`}
         >
           <div
-            className={`h-[2px] w-full transition ${
+            className={`h-[2px] w-full transition duration-300 ${
               openMenu
                 ? "translate-y-[0.2rem] -rotate-45 bg-white"
                 : "bg-neutral-300"
             }`}
           />
           <div
-            className={`h-[2px] transition ${
+            className={`h-[2px] transition duration-300 ${
               openMenu
                 ? "w-full -translate-y-[0.2rem] rotate-45 bg-white"
                 : "w-4/6 self-end bg-neutral-300"
@@ -148,108 +290,123 @@ function App() {
         </div>
         {/* Nav links and resume button */}
         <nav
-          className={`absolute top-0 right-0 z-20 flex h-screen w-2/3 flex-1 translate-x-full flex-col justify-evenly bg-neutral-800 px-10 text-center text-lg transition-transform duration-150 sm:static sm:h-auto sm:translate-x-0 sm:flex-row sm:justify-between sm:bg-transparent sm:px-0 sm:text-base${
-            openMenu ? " translate-x-0" : ""
+          className={`absolute top-0 right-0 z-20 flex h-screen w-2/3 flex-1 flex-col justify-evenly bg-neutral-800 px-10 text-center text-lg transition-transform duration-300 sm:static sm:h-auto sm:translate-x-0 sm:flex-row sm:justify-between sm:bg-transparent sm:px-0 sm:text-base${
+            openMenu
+              ? " translate-x-0"
+              : " translate-x-full"
           }`}
         >
           <ul className="flex h-2/3 flex-col items-center justify-center sm:flex-row">
-            <li
-              onClick={closeMenu}
-              title="Click to go to the about section"
-              className={`${navLinkStyles}${
-                isInAbout ? " font-semibold text-white" : ""
-              }`}
-            >
-              {" "}
-              <a href="#about">About</a>
+            <li>
+              <a
+                href="#about"
+                title="Click to go to the about section"
+                onClick={closeMenu}
+                className={`${navLinkStyles}${
+                  isInAbout
+                    ? " font-semibold text-white"
+                    : ""
+                }`}
+              >
+                About
+              </a>
             </li>
-            <li
-              onClick={closeMenu}
-              title="Click to go to the work experience section"
-              className={`${navLinkStyles}${
-                isInWork ? " font-semibold text-white" : ""
-              }`}
-            >
-              <a href="#work-experience">Work Experience</a>
+            <li>
+              <a
+                href="#work-experience"
+                title="Click to go to the work experience section"
+                onClick={closeMenu}
+                className={`${navLinkStyles}${
+                  isInWork
+                    ? " font-semibold text-white"
+                    : ""
+                }`}
+              >
+                Work Experience
+              </a>
             </li>
-            <li
-              onClick={closeMenu}
-              title="Click to go to the personal projects section"
-              className={`${navLinkStyles}${
-                isInProjects
-                  ? " font-semibold text-white"
-                  : ""
-              }`}
-            >
-              <a href="#personal-projects">
+            <li>
+              <a
+                href="#personal-projects"
+                title="Click to go to the personal projects section"
+                onClick={closeMenu}
+                className={`${navLinkStyles}${
+                  isInProjects
+                    ? " font-semibold text-white"
+                    : ""
+                }`}
+              >
                 Perosnal Projects
               </a>
             </li>
-            <li
-              onClick={closeMenu}
-              title="Click to go to the contact section"
-              className={`${navLinkStyles}${
-                isInContact
-                  ? " font-semibold text-white"
-                  : ""
-              }`}
-            >
-              <a href="#contact">Contact</a>
+            <li>
+              <a
+                href="#contact"
+                title="Click to go to the contact section"
+                onClick={closeMenu}
+                className={`${navLinkStyles}${
+                  isInContact
+                    ? " font-semibold text-white"
+                    : ""
+                }`}
+              >
+                Contact
+              </a>
             </li>
           </ul>
           <a
             href="/resume.pdf"
             target="_blank"
             title="Click to download my resume"
-            className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-150 hover:bg-neutral-800 hover:text-white"
+            className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
           >
             Resume
           </a>
         </nav>
       </header>
-      <main className="mx-auto my-28 w-11/12 max-w-2xl space-y-12 text-lg">
+      <main className="mx-auto my-28 w-11/12 max-w-3xl space-y-12 text-lg">
         {/* Intro */}
         <section
           id="intro"
           className="flex scroll-m-16 flex-col-reverse items-center text-center text-white sm:flex-row sm:justify-between sm:text-left"
         >
-          {/* INTRO (ALSO HAS CONTACT) */}
-          <div className="space-y-4 sm:mr-6">
+          {/* INTRO */}
+          <div className="max-w-lg space-y-4">
             <h1 className="text-4xl font-medium sm:text-5xl">
               Hello! I'm Pezhman Ghavami
             </h1>
             <h3 className="text-2xl sm:text-3xl">
-              I'm an Expert Front-End engineer with a strong
+              I'm a Front-End Developer with an IMMENSE
               passion for the bleeding-edge.
             </h3>
           </div>
-          <div className="mb-12 flex h-36 w-36 flex-col justify-between sm:mb-0 sm:h-48 sm:w-48 ">
+          <div className="mb-12 flex h-36 w-36 flex-col justify-between sm:mb-0 sm:h-48 sm:w-48">
             <img
-              className="rounded-full"
-              src="/my-headshot.webp"
+              className="mb-2 rounded-full"
+              src="/headshot.webp"
               alt="My-photo"
             />
             <div className="flex items-center justify-evenly text-white">
               <a
                 title="Click to visit my github"
                 target="_blank"
-                href="https://github.com/pezhmanghavami"
+                href="https://github.com/PezhmanGhavami"
               >
-                <GithubLogo className="h-7 w-7 transition-colors duration-150 hover:text-white/70" />
+                <GithubLogo className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
               </a>
               <a
                 title="Click to visit my linkedin"
                 target="_blank"
                 href="https://www.linkedin.com/in/pezhmanghavami"
               >
-                <LinkedInLogo className="h-6 w-6 transition-colors duration-150 hover:text-white/70" />
+                <LinkedInLogo className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
               </a>
               <a
                 title="Click to send me an email"
                 target="_blank"
                 href="mailto:mail@pezhmanghavami.com"
               >
-                <EmailLogo className="h-7 w-7 transition-colors duration-150 hover:text-white/70" />
+                <EmailLogo className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
               </a>
             </div>
           </div>
@@ -263,39 +420,11 @@ function App() {
           <h2 className={sectionHeadingStyles}>About Me</h2>
           <div className="space-y-2">
             <p>
-              Since the beginning of my journey, I have been
-              passionate about building dynamic, creative
-              products using the latest technologies to
-              deliver intuitive user experiences.
-            </p>
-            <p>
-              Over the past four years, I have{" "}
-              <a
-                href="#work-experience"
-                className={anchroTagStyles}
-              >
-                worked
-              </a>{" "}
-              on various projects, taking them from ideas to
-              production.
-            </p>
-            <p>
-              Currently, I am iterating over this website
-              and my{" "}
-              <a
-                href="#personal-projects"
-                className={anchroTagStyles}
-              >
-                other projects
-              </a>
-              . Feel free to{" "}
-              <a
-                className={anchroTagStyles}
-                href="#contact"
-              >
-                contact me
-              </a>{" "}
-              if you are interested in working with me!
+              Driven by curiosity and a deep desire to
+              create, I am a self-motivated Front-End
+              Developer with more than five years of
+              experience in building, testing and deploying
+              scalable websites and web applications.
             </p>
           </div>
         </section>
@@ -308,111 +437,10 @@ function App() {
           <h2 className={sectionHeadingStyles}>
             Work Experience
           </h2>
-          <div>
-            <p className="w-fit flex-1 brightness-90">
-              May 2017- February 2022
-            </p>
-            <div className="space-y-2">
-              <a
-                className={anchroTagStyles}
-                href="https://rayabot.com/"
-              >
-                Co-Founder and Full-Stack Developer -
-                Rayabot
-              </a>
-
-              <div className="space-y-3 text-base">
-                <div>
-                  <p className="brightness-90">2019-2021</p>
-                  <p>
-                    Worked with a team of developers and
-                    designers to build a SaaS product which
-                    included:
-                  </p>
-                  <ul className="list-inside list-disc">
-                    <li>
-                      A user control panel for managing
-                      subscriptions
-                    </li>
-                    <li>
-                      An admin control panel to manage users
-                      and the instances of our automated
-                      trading software
-                    </li>
-                    <li>
-                      Product performance data visualization
-                      in the admin panel
-                    </li>
-                    <li>
-                      An SSE server for broadcasting our
-                      trading software's server instance
-                      events to the clients
-                    </li>
-                    <li>
-                      A client in the cTrader platform as a
-                      cBot
-                    </li>
-                    <li>
-                      A GUI made using electron to act as a
-                      bridge client for MetaTrader
-                    </li>
-                  </ul>
-                  <p className="text-lg brightness-75">
-                    React • Redux-Toolkit • React Router •
-                    Sass • Styled Components • D3.js •
-                    Electron • Express.js • PostgreSQL •
-                    Redis • JavaScript • C# • cAlgo • MQL5
-                  </p>
-                </div>
-                <div>
-                  <p className="brightness-90">2019</p>
-                  <p>
-                    Made an internal REST API for
-                    authenticating and managing our various
-                    trading software.
-                  </p>
-                  <p className="text-lg brightness-75">
-                    Express.js • JavaScript
-                  </p>
-                </div>
-                <div>
-                  <p className="brightness-90">2018</p>
-                  <p>
-                    Made a WordPress e-commerce website.
-                  </p>
-                  <p className="text-lg brightness-75">
-                    WordPress
-                  </p>
-                </div>
-                <div>
-                  <p className="brightness-90">2017-2022</p>
-                  <p>
-                    Closely collaborated with the trading
-                    team to turn their strategies into
-                    indicators and automated trading
-                    solutions in the cAlgo platform.
-                  </p>
-                  <p className="text-lg brightness-75">
-                    cAlgo • C#
-                  </p>
-                </div>
-                <div>
-                  <p className="brightness-90">2017-2022</p>
-
-                  <p>
-                    Made several telegram bots for
-                    broadcasting indicator signals,
-                    delivering trade notifications, and
-                    monitoring different trading software
-                    statuses.
-                  </p>
-                  <p className="text-lg brightness-75">
-                    Node.js • Prisma • SQLite • JavaScript •
-                    TypeScript
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="space-y-6">
+            {workExperiencesData.map((data) => (
+              <WorkExperience key={data.id} data={data} />
+            ))}
           </div>
         </section>
         {/* Personal Projects */}
@@ -424,163 +452,13 @@ function App() {
           <h2 className={sectionHeadingStyles}>
             Personal Projects
           </h2>
-          <p>
-            Here are some of my personal projects that I'm
-            currently working on.
-          </p>
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-4">
-            {/* Clothing Shop */}
-            <div className={personalProjectCard.container}>
-              <div
-                className={
-                  personalProjectCard.aboutContainer
-                }
-              >
-                <h4 className={personalProjectCard.heading}>
-                  Clothing Shop
-                </h4>
-                <p
-                  className={
-                    personalProjectCard.description
-                  }
-                >
-                  An e-commerce prototype website, made to
-                  be a playground for trying out different
-                  kinds of tech
-                </p>
-                <p className={personalProjectCard.stack}>
-                  Next.js • React • Tailwindcss • SWR •
-                  iron-session • Prisma • PostgreSQL •
-                  TypeScript
-                </p>
-              </div>
-              <div
-                className={
-                  personalProjectCard.linkContainer
-                }
-              >
-                <a
-                  title="Click to go to the repository"
-                  href="https://github.com/pezhmanghavami/clothing-shop"
-                  target="_blank"
-                  className={personalProjectCard.link}
-                >
-                  See the code
-                </a>
-                <a
-                  title="Click to open the live version"
-                  href="https://clothingshop.pezhmanghavami.com"
-                  target="_blank"
-                  className={personalProjectCard.link}
-                >
-                  Checkout the live version
-                </a>
-              </div>
-            </div>
-            {/* Chat App */}
-            <div className={personalProjectCard.container}>
-              <div
-                className={
-                  personalProjectCard.aboutContainer
-                }
-              >
-                <h4 className={personalProjectCard.heading}>
-                  Chat App
-                </h4>
-                <p
-                  className={
-                    personalProjectCard.description
-                  }
-                >
-                  This is a prototype chat application. Like
-                  my other project, the purpose of this one
-                  is also testing out different tech but
-                  with real-time communications and more App
-                  like behavior
-                </p>
-                <p className={personalProjectCard.stack}>
-                  React • Tailwindcss • SWR • React Router •
-                  Vite • Socket.IO • Express.js •
-                  iron-session • Prisma • PostgreSQL •
-                  TypeScript
-                </p>
-              </div>
-              <div
-                className={
-                  personalProjectCard.linkContainer
-                }
-              >
-                <a
-                  title="Click to go to the repository"
-                  href="https://github.com/pezhmanghavami/chat-app"
-                  target="_blank"
-                  className={personalProjectCard.link}
-                >
-                  See the code
-                </a>
-                <a
-                  title="Click to open the live version"
-                  href="https://chatapp.pezhmanghavami.com"
-                  target="_blank"
-                  className={personalProjectCard.link}
-                >
-                  Checkout the live version
-                </a>
-              </div>
-            </div>
-            {/* Sorting Visualizer */}
-            <div
-              className={
-                personalProjectCard.container +
-                " sm:col-start-2"
-              }
-            >
-              <div
-                className={
-                  personalProjectCard.aboutContainer
-                }
-              >
-                <h4 className={personalProjectCard.heading}>
-                  Sorting Visualizer
-                </h4>
-                <p
-                  className={
-                    personalProjectCard.description
-                  }
-                >
-                  An app to visualize different sorting
-                  algorithms with the ability to rewind them
-                  to better understand how each algorithm
-                  works. It is also very mesmerizing to
-                  watch!
-                </p>
-                <p className={personalProjectCard.stack}>
-                  React • Vite • TypeScript
-                </p>
-              </div>
-              <div
-                className={
-                  personalProjectCard.linkContainer
-                }
-              >
-                <a
-                  title="Click to go to the repository"
-                  href="https://github.com/pezhmanghavami/sorting-visualizer"
-                  target="_blank"
-                  className={personalProjectCard.link}
-                >
-                  See the code
-                </a>
-                <a
-                  title="Click to open the live version"
-                  href="https://sortingvisualizer.pezhmanghavami.com"
-                  target="_blank"
-                  className={personalProjectCard.link}
-                >
-                  Checkout the live version
-                </a>
-              </div>
-            </div>
+            {personalProjectsData.map((data) => (
+              <PersonalProjectCard
+                key={data.id}
+                data={data}
+              />
+            ))}
           </div>
         </section>
         {/* Contact */}
@@ -593,20 +471,21 @@ function App() {
             together or have any questions, you can contact
             me through the ways listed below:
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:justify-between sm:gap-0">
+          <div className="mt-8 flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0">
             <a
               title="Click to send me an Email"
-              className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-150 hover:bg-neutral-800 hover:text-white"
+              className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
               href="mailto:mail@pezhmanghavami.com"
             >
               Say hi via an Email
             </a>
+            <div className="relative h-[1px] w-24 bg-neutral-600 after:absolute after:-top-4 after:right-1/2 after:h-7 after:w-7 after:translate-x-1/2 after:rounded-full after:bg-neutral-900 after:text-center after:content-['or']" />
             <a
               title="Click to go to my Linkedin profile"
-              className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-150 hover:bg-neutral-800 hover:text-white"
+              className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
               href="https://www.linkedin.com/in/pezhmanghavami"
             >
-              Or send me a message on Linkedin
+              Send me a message on Linkedin
             </a>
           </div>
         </section>
