@@ -59,7 +59,6 @@ const workExperiencesData = [
       "Started and completed three Personal Projects to keep my skills fresh and have a playground for trying out different tech.",
       "Kept myself updated with the industry trends and further developed my skills as a Web Developer by learning and trying out libraries like tRPC, Zustand and Cypress.",
     ],
-    techUsed: "",
   },
   {
     id: 1,
@@ -67,21 +66,14 @@ const workExperiencesData = [
     jobTitle: "Full-Stack Developer & Co-Founder | Rayabot",
     highlights: [
       "Led a team of 4 developers in collaboration with a UI/UX designer to develop and launch a SaaS product that led to a 150% increase in yearly revenue and a %1000 increase in the active user base that year.",
-      "Built and deployed an SSE API to broadcast events of our trading software using Express.js.",
-      "Built an Admin dashboard for managing users, the SSE server events, and the consuming clients subscribed to that server using React.",
-      "By Visualizing the trade log of our automated trading software using D3.js, I helped the trading team to improve trade accuracy by 50%, lower maximum equity drawdown by 20%, and increase yearly profits by 6%.",
+      "Built and deployed an Admin dashboard for managing users, server events, and the consuming clients subscribed to that server using React.",
       "Achieved 100% test coverage by writing unit tests using Jest for the Admin and User dashboards.",
       "Participated in the development of an Electron.js app's UI using React.",
-      "Closely collaborated and communicated with the trading team to turn their strategies into indicators and automated trading solutions in the cTrader platform and TradingView.",
-      "Maintained our various trading softwares and indicators.",
-      "Designed and developed a server and client version of our automated trading software to broadcast and consume its events through an SSE API in the cTrader platform.",
-      "Made several telegram bots to broadcast indicator signals, deliver trade notifications, and monitor different trading software statuses.",
+      "By Visualizing the trade log of our automated trading software using D3.js, I helped the trading team to improve trade accuracy by 50%, lower maximum equity drawdown by 20%, and increase yearly profits by 6%.",
       "By optimizing our main trading bot, I made the algorithm run 40% faster, which resulted in quicker backtests and improved productivity.",
       "Improved performance of our primary indicator and made its initial calculation go from O(n^2) to O(n), drastically cutting draw time.",
       "Made a WordPress e-commerce website that helped increase our sales by 60%.",
     ],
-    techUsed:
-      "React • Redux-Toolkit • React Router • Sass • Styled Components • D3.js • Electron • Express.js • Jest • Prisma • PostgreSQL • SQLite • Redis • MongoDB • JavaScript • TypeScript • WordPress • C# • cAlgo • MQL5 • Pine Script",
   },
 ];
 
@@ -112,9 +104,6 @@ const WorkExperience = ({
               </li>
             ))}
           </ul>
-          <p className="mt-1 text-lg brightness-75">
-            {data.techUsed}
-          </p>
         </div>
       </div>
     </div>
