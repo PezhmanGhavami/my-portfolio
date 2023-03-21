@@ -41,7 +41,7 @@ const personalProjectsData = [
     imageAlt: "Sorting Visualizer preview",
     name: "Sorting Visualizer",
     description:
-      "An app to visualize different sorting algorithms with the ability to rewind them to better understand how each algorithm works. Since there are a lot of re-renderings happening, optimization was an important aspect of development, by leveraging the useMemo and useCallback hooks I managed to create smoother re-renders, specially when rewinding through the results.",
+      "An app to visualize different sorting algorithms with the ability to rewind them to better understand how each algorithm works. Since there are a lot of re-renderings happening, optimization was an important aspect of development, by leveraging the useCallback hook I managed to create smoother re-renders, specially when rewinding through the results.",
     techStack: "React • Vite • TypeScript",
     githubURL:
       "https://github.com/PezhmanGhavami/sorting-visualizer",
@@ -72,7 +72,7 @@ const workExperiencesData = [
       "By Visualizing the trade log of our automated trading software using D3.js, I helped the trading team to improve trade accuracy by 50%, lower maximum equity drawdown by 20%, and increase yearly profits by 6%.",
       "By optimizing our main trading bot, I made the algorithm run 40% faster, which resulted in quicker backtests and improved productivity.",
       "Improved performance of our primary indicator and made its initial calculation go from O(n^2) to O(n), drastically cutting draw time.",
-      "Made a WordPress e-commerce website that helped increase our sales by 60%.",
+      "Closely collaborated with the trading team to turn their strategies into indicators and automated trading solutions in the cTrader platform and TradingView.",
     ],
   },
 ];
@@ -279,7 +279,7 @@ function App() {
         </div>
         {/* Nav links and resume button */}
         <nav
-          className={`absolute top-0 right-0 z-20 flex h-screen w-2/3 flex-1 flex-col justify-evenly bg-neutral-800 px-10 text-center text-lg transition-transform duration-300 sm:static sm:h-auto sm:translate-x-0 sm:flex-row sm:justify-between sm:bg-transparent sm:px-0 sm:text-base${
+          className={`absolute top-0 right-0 z-20 flex h-screen w-2/3 flex-1 flex-col justify-evenly bg-neutral-800 px-10 text-center text-lg transition-transform duration-300 sm:static sm:ml-2 sm:h-auto sm:translate-x-0 sm:flex-row sm:items-center sm:justify-between sm:bg-transparent sm:px-0 sm:text-base${
             openMenu
               ? " translate-x-0"
               : " translate-x-full"
@@ -410,10 +410,10 @@ function App() {
           <div className="space-y-2">
             <p>
               Driven by curiosity and a deep desire to
-              create, I am a self-motivated Front-End
-              Developer with more than five years of
-              experience in building, testing and deploying
-              scalable websites and web applications.
+              create, I am a Front-End Developer with more
+              than five years of experience in building,
+              testing and deploying scalable websites and
+              web applications.
             </p>
           </div>
         </section>
