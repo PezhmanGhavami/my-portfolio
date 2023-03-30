@@ -53,7 +53,7 @@ const workExperiencesData = [
   {
     id: 2,
     duration: "February 2022 - March 2023",
-    jobTitle: "Career Break | Medical leave",
+    jobTitle: "Career Break | Medical Leave",
     highlights: [
       "Took a break due to a medical condition that has now been completely resolved. Recovered to full health and available for full-time employment.",
       "Started and completed three Personal Projects to keep my skills fresh and have a playground for trying out different tech.",
