@@ -285,7 +285,7 @@ function App() {
               : " translate-x-full"
           }`}
         >
-          <ul className="flex h-2/3 flex-col items-center justify-center sm:flex-row">
+          <ul className="flex h-2/3 flex-col items-center justify-center space-y-2 sm:flex-row sm:space-y-0">
             <li>
               <a
                 href="#about"
