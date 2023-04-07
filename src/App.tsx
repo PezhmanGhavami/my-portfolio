@@ -5,7 +5,7 @@ import { ReactComponent as GithubLogo } from "./assets/social-logos/github.svg";
 import { ReactComponent as LinkedInLogo } from "./assets/social-logos/linkedin.svg";
 
 const navLinkStyles =
-  "transition-colors duration-300 hover:text-white hover:bg-neutral-800 px-2 py-1 rounded-md";
+  "transition-colors duration-300 hover:text-white hover:bg-neutral-800 px-2 py-1.5 rounded-md";
 const sectionHeadingStyles =
   "text-white text-3xl sm:text-4xl mb-3";
 
@@ -362,12 +362,15 @@ function App() {
           {/* INTRO */}
           <div className="max-w-lg space-y-4">
             <h1 className="text-4xl font-medium sm:text-5xl">
-              Hello! I'm Pezhman Ghavami
+              Hi! my name is{" "}
+              <span className="inline-block">
+                Pezhman Ghavami
+              </span>
             </h1>
-            <h3 className="text-2xl sm:text-3xl">
-              I'm a Front-End Developer with an IMMENSE
-              passion for the bleeding-edge.
-            </h3>
+            <p className="text-xl sm:text-2xl">
+              A Front-End Developer with an IMMENSE passion
+              for the bleeding-edge.
+            </p>
           </div>
           <div className="mb-12 flex h-36 w-36 flex-col justify-between sm:mb-0 sm:h-48 sm:w-48">
             <img
