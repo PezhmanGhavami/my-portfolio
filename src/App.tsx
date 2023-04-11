@@ -459,9 +459,9 @@ function App() {
             Get in touch
           </h2>
           <p>
-            If you'd like to build something interesting
-            together or have any questions, you can contact
-            me through the ways listed below:
+            If you'd like to build something cool together
+            or have any questions, you can contact me
+            through the ways listed below:
           </p>
           <div className="mt-8 flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0">
             <a
