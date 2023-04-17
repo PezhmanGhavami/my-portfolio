@@ -8,6 +8,8 @@ const navLinkStyles =
   "transition-colors duration-300 hover:text-white hover:bg-neutral-800 px-2 py-1.5 rounded-md";
 const sectionHeadingStyles =
   "text-white text-3xl sm:text-4xl mb-3";
+const buttonStyles =
+  "rounded-md border border-neutral-600 px-3 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white";
 
 const personalProjectsData = [
   {
@@ -138,7 +140,7 @@ const PersonalProjectCard = ({
           title="Click to go to the repository"
           href={data.githubURL}
           target="_blank"
-          className="w-fit rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
+          className={buttonStyles}
         >
           See the code
         </a>
@@ -146,7 +148,7 @@ const PersonalProjectCard = ({
           title="Click to open the live version"
           href={data.liveURL}
           target="_blank"
-          className="w-fit rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
+          className={buttonStyles}
         >
           Checkout the live version
         </a>
@@ -347,7 +349,7 @@ function App() {
             href="/resume.pdf"
             target="_blank"
             title="Click to download my resume"
-            className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
+            className={buttonStyles}
           >
             Resume
           </a>
@@ -466,7 +468,7 @@ function App() {
           <div className="mt-8 flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0">
             <a
               title="Click to send me an Email"
-              className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
+              className={buttonStyles}
               href="mailto:mail@pezhmanghavami.com"
             >
               Say hi via an Email
@@ -474,7 +476,7 @@ function App() {
             <div className="relative h-[1px] w-24 bg-neutral-600 after:absolute after:-top-4 after:right-1/2 after:h-7 after:w-7 after:translate-x-1/2 after:rounded-full after:bg-neutral-900 after:text-center after:content-['or']" />
             <a
               title="Click to go to my Linkedin profile"
-              className="rounded-md border border-neutral-600 px-2 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
+              className={buttonStyles}
               href="https://www.linkedin.com/in/pezhmanghavami"
             >
               Send me a message on Linkedin
