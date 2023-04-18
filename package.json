@@ -10,21 +10,21 @@
     "update": "ncu -u && npm i"
   },
   "dependencies": {
-    "npm-check-updates": "^16.9.0",
+    "npm-check-updates": "^16.10.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.31",
+    "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.22",
     "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.6",
+    "prettier-plugin-tailwindcss": "^0.2.7",
     "tailwindcss": "^3.3.1",
-    "typescript": "^5.0.3",
-    "vite": "^4.2.1",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.2",
     "vite-plugin-svgr": "^2.4.0"
   }
 }
