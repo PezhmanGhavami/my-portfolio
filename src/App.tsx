@@ -54,7 +54,7 @@ const personalProjectsData = [
 const workExperiencesData = [
   {
     id: 2,
-    duration: "February 2022 - March 2023",
+    duration: "February 2022 - April 2023",
     jobTitle: "Career Break | Medical Leave",
     highlights: [
       "Took a break due to a medical condition that has now been completely resolved. Recovered to full health and available for full-time employment.",
