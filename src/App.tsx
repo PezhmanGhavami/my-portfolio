@@ -31,9 +31,9 @@ const personalProjectsData = [
     imageAlt: "Chat App preview",
     name: "Chat App",
     description:
-      "This is a prototype chat application. Like my other project, the purpose of this one is also testing out different tech but with real-time communications and more App like behavior.",
+      "This is a prototype chat application. Like my other project, the purpose of this one is also testing out different tech but with real-time communications (Socket.IO and WebRTC) and more App like behavior.",
     techStack:
-      "React • Tailwind CSS • SWR • React Router • Vite • Socket.IO • Express.js • iron-session • Prisma • PostgreSQL • TypeScript",
+      "React • Tailwind CSS • SWR • React Router • simple-peer • Vite • Socket.IO • Express.js • iron-session • Prisma • PostgreSQL • TypeScript",
     githubURL: "https://github.com/PezhmanGhavami/chat-app",
     liveURL: "https://chatapp.pezhmanghavami.com",
   },
