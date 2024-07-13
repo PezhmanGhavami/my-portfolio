@@ -5,6 +5,19 @@ import GithubLogo from "@/assets/social-logos/github.svg";
 import LinkedInLogo from "@/assets/social-logos/linkedin.svg";
 import { metadataMaker } from "@/lib/utils";
 
+const content = {
+  intro: {
+    title: "hey, I'm Pezhman 👋",
+    subtitle:
+      "I'm a Full-Stack Developer with an IMMENSE passion for the bleeding-edge.",
+  },
+  contact: {
+    title: "",
+    subtitle:
+      "If you'd like to build something cool together or have any questions, you can contact me through the ways listed below:",
+  },
+};
+
 const sectionHeadingStyles = "text-white text-3xl sm:text-4xl mb-3";
 const buttonStyles =
   "rounded-md border border-neutral-600 px-3 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white";
@@ -74,19 +87,6 @@ const workExperiencesData = [
     ],
   },
 ];
-
-const content = {
-  intro: {
-    title: "hey, I'm Pezhman 👋",
-    subtitle:
-      "I'm a Front-End Developer with an IMMENSE passion for the bleeding-edge.",
-  },
-  contact: {
-    title: "",
-    subtitle:
-      "If you'd like to build something cool together or have any questions, you can contact me through the ways listed below:",
-  },
-};
 
 type personalProjectData = (typeof personalProjectsData)[0];
 type workExperienceData = (typeof workExperiencesData)[0];
@@ -161,7 +161,10 @@ export const generateMetadata = async () => {
 const Main = () => {
   return (
     <div className="overflow-x-hidden bg-neutral-900 text-neutral-300">
-      <main className="mx-auto my-28 w-11/12 max-w-3xl space-y-12 text-lg">
+      <main
+        id="main-container"
+        className="mx-auto my-28 w-11/12 max-w-3xl space-y-12 text-lg"
+      >
         {/* Intro */}
         <section
           id="intro"
