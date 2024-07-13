@@ -25,6 +25,22 @@ const Navbar = () => {
     setOpenMenu(false);
   };
 
+  // Disables overflow on body so the modal can be scrollable on mobile
+  useEffect(() => {
+    if (openMenu) {
+      globalThis.document.body.classList.add(
+        "overflow-hidden",
+        "lg:overflow-auto",
+      );
+    } else {
+      globalThis.document.body.classList.remove(
+        "overflow-hidden",
+        "lg:overflow-auto",
+      );
+    }
+  }, [openMenu]);
+
+  // Scroll link highlight handler
   useEffect(() => {
     const mainContainer = globalThis.document.querySelector(
       "#main-container",
@@ -113,9 +129,10 @@ const Navbar = () => {
           <Link
             href="#intro"
             title="Click to go back to top"
-            className={`m-2 rounded-md text-4xl font-medium text-blue-400${
-              openMenu ? "pointer-events-none blur-sm" : ""
-            }`}
+            className={cn(
+              "m-2 rounded-md text-4xl font-medium text-blue-400",
+              openMenu && "pointer-events-none blur-sm",
+            )}
           >
             PG
           </Link>
