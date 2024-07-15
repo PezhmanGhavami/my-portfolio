@@ -21,8 +21,6 @@ jobs:
       - name: Setting env variables
         run: |
           touch .env 
-          echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env 
-          echo SECRET_COOKIE_PASSWORD=${{ secrets.SECRET_COOKIE_PASSWORD }} >> .env
           echo BASE_URL=${{ secrets.BASE_URL }} >> .env
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
