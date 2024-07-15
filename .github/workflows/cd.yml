@@ -13,14 +13,27 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setting env variables
+        run: |
+          touch .env 
+          echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env 
+          echo SECRET_COOKIE_PASSWORD=${{ secrets.SECRET_COOKIE_PASSWORD }} >> .env
+          echo BASE_URL=${{ secrets.BASE_URL }} >> .env
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
-      - run: npm run build
+      - name: Installing dependencies
+        run: npm ci
+      - name: Installing sharp
+        run: npm i sharp
+      - name: Building a production version
+        run: npm run build
+      - name: Restarting the server
+        run: pm2 restart clothing-shop -s
