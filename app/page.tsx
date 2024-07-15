@@ -19,7 +19,7 @@ import { homepageContent } from "@/content/homepage";
 
 export const generateMetadata = async () => {
   return metadataMaker({
-    title: "Pezhman Ghavami - Front-End Developer",
+    title: "Pezhman Ghavami - Full-Stack Developer",
     description: "Pezhman Ghavami's Portfolio website",
     endpoint: "",
   });

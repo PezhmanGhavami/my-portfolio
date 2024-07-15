@@ -51,16 +51,16 @@ export const metadataMaker = (props: TSimpleMetadataObjectProps): Metadata => {
       url: pageUrl,
       title: props.title,
       description: props.description,
-      images:
-        "https://res.cloudinary.com/drsgyshsf/image/upload/v1680355890/my-portfolio/og-and-tc/pezhmanghavami-og_vl5x4l.png",
+      // images:
+      //   "https://res.cloudinary.com/drsgyshsf/image/upload/v1680355890/my-portfolio/og-and-tc/pezhmanghavami-og_vl5x4l.png",
     },
     twitter: {
       card: "summary_large_image",
       title: props.title,
       description: props.description,
       site: pageUrl,
-      images:
-        "https://res.cloudinary.com/drsgyshsf/image/upload/v1680355891/my-portfolio/og-and-tc/pezhmanghavami-tc_spuarz.png",
+      // images:
+      //   "https://res.cloudinary.com/drsgyshsf/image/upload/v1680355891/my-portfolio/og-and-tc/pezhmanghavami-tc_spuarz.png",
     },
   };
 };

@@ -44,13 +44,13 @@ export const homepageContent = {
       {
         id: 3,
         duration: "July 2023 - Now",
-        jobTitle: "Front-End Developer | Quarkino",
+        jobTitle: "Full-Stack Developer | Quarkino",
         highlights: [
           "Contributed in developing a successful migration/rewrite plan to migrate the legacy web applications and their associated tools from Vue2 to Next.js 13, resulting in a drastic improvement on lighthouse scores.",
           "Created a project template for starting new projects using Next.js latest.",
           "Collaborated with the product, back-end and the design team to take part in rewriting Quarkino, Depoint and ICIB using our new tools in React.",
           "Took an active role in designing and developing a SDK for using Quarkinos headless CMS.",
-          "Participated in setting up a mono repo to manage our different types of Front-End applications as a service.",
+          "Participated in setting up a mono repo to manage our different types of Full-Stack applications as a service.",
           // "Attended multiple knowledge sharing sessions with my peers "
         ],
       },
