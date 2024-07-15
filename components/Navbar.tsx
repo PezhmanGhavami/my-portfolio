@@ -165,7 +165,7 @@ const Navbar = () => {
             href={homepageContent.navbar.logo.href}
             title={homepageContent.navbar.logo.title}
             className={cn(
-              "m-2 rounded-md text-4xl font-medium text-blue-400",
+              "m-2 ms-0 rounded-md text-4xl font-medium text-blue-400",
               openMenu && "pointer-events-none blur-sm",
             )}
           >
