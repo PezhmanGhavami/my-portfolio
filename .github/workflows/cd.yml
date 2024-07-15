@@ -34,4 +34,4 @@ jobs:
       - name: Building a production version
         run: npm run build
       - name: Restarting the server
-        run: pm2 restart clothing-shop -s
+        run: pm2 restart my-portfolio -s

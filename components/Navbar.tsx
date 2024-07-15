@@ -226,6 +226,8 @@ const Navbar = () => {
             </ul>
             <Button>
               <Link
+                download
+                prefetch={false}
                 target="_blank"
                 href={homepageContent.navbar.resumeButton.href}
                 title={homepageContent.navbar.resumeButton.title}
