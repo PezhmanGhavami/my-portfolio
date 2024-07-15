@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 import Button from "@/components/Button";
@@ -24,22 +25,22 @@ const SinglePersonalProject = ({ data }: { data: TPersonalProjectData }) => {
       </div>
       <div className="flex flex-col items-center justify-around space-y-2 py-6">
         <Button>
-          <a
+          <Link
             title="Click to go to the repository"
             href={data.githubURL}
             target="_blank"
           >
             {homepageContent.personalProjects.buttons.github}
-          </a>
+          </Link>
         </Button>
         <Button>
-          <a
+          <Link
             title="Click to open the live version"
             href={data.liveURL}
             target="_blank"
           >
             {homepageContent.personalProjects.buttons.liveVersion}
-          </a>
+          </Link>
         </Button>
       </div>
     </div>

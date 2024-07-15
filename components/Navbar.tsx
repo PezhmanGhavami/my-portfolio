@@ -1,14 +1,12 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
-const navLinkStyles =
-  "transition-colors duration-300 hover:text-white hover:bg-neutral-800 px-2 py-1.5 rounded-md";
+import { cn } from "@/lib/utils";
 
-const buttonStyles =
-  "rounded-md border border-neutral-600 px-3 py-1 transition-colors duration-300 hover:bg-neutral-800 hover:text-white";
+import Button from "@/components/Button";
+import { homepageContent } from "@/content/homepage";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -92,7 +90,10 @@ const Navbar = () => {
           return;
         }
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        if (
+          scrollY > sectionTop &&
+          scrollY <= sectionTop + sectionHeight + 48 // gap between each element gap-12 48px
+        ) {
           refSelector[sectionId].current?.classList.add("text-white");
           refSelector[sectionId].current?.classList.add("font-semibold");
         } else {
@@ -108,6 +109,40 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", navHighlighter);
   }, []);
+
+  const navbarItems = useMemo(
+    () => [
+      {
+        id: 1,
+        href: "#about",
+        ref: aboutRef,
+        title: "Click to go to the about section",
+        text: "About",
+      },
+      {
+        id: 2,
+        href: "#work-experience",
+        ref: workExperienceRef,
+        title: "Click to go to the work experience section",
+        text: "Work Experience",
+      },
+      {
+        id: 3,
+        href: "#personal-projects",
+        ref: personalProjectsRef,
+        title: "Click to go to the personal projects section",
+        text: "Personal Projects",
+      },
+      {
+        id: 4,
+        href: "#contact",
+        ref: contactRef,
+        title: "Click to go to the contact section",
+        text: "Contact",
+      },
+    ],
+    [],
+  );
 
   return (
     <>
@@ -127,14 +162,14 @@ const Navbar = () => {
         <div className="mx-auto flex w-full max-w-3xl items-center justify-between">
           {/* Logo */}
           <Link
-            href="#intro"
-            title="Click to go back to top"
+            href={homepageContent.navbar.logo.href}
+            title={homepageContent.navbar.logo.title}
             className={cn(
               "m-2 rounded-md text-4xl font-medium text-blue-400",
               openMenu && "pointer-events-none blur-sm",
             )}
           >
-            PG
+            {homepageContent.navbar.logo.text}
           </Link>
           {/* Menu button */}
           <div
@@ -175,59 +210,29 @@ const Navbar = () => {
               id="nav-links-container"
               className="flex h-2/3 flex-col items-center justify-center space-y-2 sm:flex-row sm:space-y-0"
             >
-              <li>
-                <Link
-                  href="#about"
-                  ref={aboutRef}
-                  title="Click to go to the about section"
-                  onClick={closeMenu}
-                  className={navLinkStyles}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#work-experience"
-                  ref={workExperienceRef}
-                  title="Click to go to the work experience section"
-                  onClick={closeMenu}
-                  className={navLinkStyles}
-                >
-                  Work Experience
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#personal-projects"
-                  ref={personalProjectsRef}
-                  title="Click to go to the personal projects section"
-                  onClick={closeMenu}
-                  className={navLinkStyles}
-                >
-                  Personal Projects
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  ref={contactRef}
-                  title="Click to go to the contact section"
-                  onClick={closeMenu}
-                  className={navLinkStyles}
-                >
-                  Contact
-                </a>
-              </li>
+              {navbarItems.map((item) => (
+                <li key={item.id}>
+                  <Link
+                    href={item.href}
+                    ref={item.ref}
+                    title={item.title}
+                    onClick={closeMenu}
+                    className="rounded-md px-2 py-1.5 transition-colors duration-300 hover:bg-neutral-800 hover:text-white"
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
-            <Link
-              href="/resume.pdf"
-              target="_blank"
-              title="Click to download my resume"
-              className={buttonStyles}
-            >
-              Resume
-            </Link>
+            <Button>
+              <Link
+                target="_blank"
+                href={homepageContent.navbar.resumeButton.href}
+                title={homepageContent.navbar.resumeButton.title}
+              >
+                {homepageContent.navbar.resumeButton.text}
+              </Link>
+            </Button>
           </nav>
         </div>
       </header>
