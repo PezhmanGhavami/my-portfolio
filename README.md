@@ -1,6 +1,6 @@
 This is my portflio website
 
-You can checkout the live version [here](https://pezhmanghavami.com/)
+You can checkout the live version [here](https://pezhman.io/)
 
 To run locally:
 
