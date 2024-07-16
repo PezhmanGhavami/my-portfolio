@@ -30,7 +30,7 @@ export const homepageContent = {
       },
       email: {
         title: "Click to send me an email",
-        href: "mailto:mail@pezhmanghavami.com",
+        href: "mailto:pejmanghavami@gmail.com",
       },
     },
   },
