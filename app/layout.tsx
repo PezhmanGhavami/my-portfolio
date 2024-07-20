@@ -1,7 +1,10 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
+import { Viewport } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+
+export const viewport: Viewport = {
+  themeColor: "#171717",
+};
 
 export const generateMetadata = async () => {
   return {
@@ -33,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
