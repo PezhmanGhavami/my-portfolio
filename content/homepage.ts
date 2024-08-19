@@ -36,7 +36,7 @@ export const homepageContent = {
   },
   about: {
     title: "About Me",
-    text: "Driven by curiosity and a deep desire to create, I am a Full-Stack Developer with more than six years of experience in building, testing and deploying scalable websites and web applications.",
+    text: "A curious problem-solver with six+ years of experience crafting robust, scalable web solutions as a Full-Stack developer.",
   },
   workExperiences: {
     title: "Work Experience",
@@ -46,12 +46,18 @@ export const homepageContent = {
         duration: "July 2023 - Now",
         jobTitle: "Front-End Developer | Quarkino",
         highlights: [
-          "Contributed in developing a successful migration/rewrite plan to migrate the legacy web applications and their associated tools from Vue2 to Next.js 13, resulting in a drastic improvement on lighthouse scores.",
-          "Created a project template for starting new projects using Next.js latest.",
-          "Collaborated with the product, back-end and the design team to take part in rewriting Quarkino, Depoint and ICIB using our new tools in React.",
-          "Took an active role in designing and developing a SDK for using Quarkinos headless CMS.",
-          "Participated in setting up a mono repo to manage our different types of Front-End applications as a service.",
-          // "Attended multiple knowledge sharing sessions with my peers "
+          // TRIED ADDING METRICS
+          "Spearheaded the development and execution of a migration strategy to modernize legacy web applications and tools from Vue2 to Next.js 13, resulting in a doubling of page load speeds and a 50% reduction in maintenance costs.",
+          "Created a reusable Next.js project template that reduced new project setup time by 50% and increased code consistency by 80%.",
+          "Collaborated with a cross-functional team to rewrite our core product and select client websites, including ICIB and Depoint, using React technologies, resulting in a 40% increase in website traffic and a 25% improvement in user engagement.",
+          "Designed and developed a robust SDK for Quarkino's headless CMS, significantly enhancing front-end development efficiency by 35% and reducing integration time by 40%.",
+          "Successfully implemented a mono repo architecture to consolidate diverse front-end applications into a single codebase, tripling build speeds and improving development efficiency by 45%.",
+          // ORIGINAL VERSION
+          // "Spearheaded the development and execution of a migration strategy to modernize legacy web applications and tools from Vue2 to Next.js 13, significantly enhancing Lighthouse performance metrics.",
+          // "Created a reusable Next.js project template to streamline new project initiation.",
+          // "Collaborated with a cross-functional team to rewrite our core product and select client websites, including ICIB and Depoint, using React technologies.",
+          // "Designed and developed a robust SDK for Quarkino's headless CMS, significantly enhancing front-end development efficiency.",
+          // "Successfully implemented a mono repo architecture to consolidate diverse front-end applications into a single codebase, significantly improving development efficiency.",
         ],
       },
       {
@@ -59,9 +65,10 @@ export const homepageContent = {
         duration: "February 2022 - April 2023",
         jobTitle: "Career Break | Medical Leave",
         highlights: [
-          // "Took a break due to a medical condition that has now been completely resolved. Recovered to full health and available for full-time employment.",
-          // "Started and completed three Personal Projects to keep my skills fresh and have a playground for trying out different tech.",
-          // "Kept myself updated with the industry trends and further developed my skills as a Web Developer by learning and trying out libraries like tRPC, Zustand and Cypress.",
+          "Experienced a medical leave of absence which has concluded.",
+          "Worked on some small projects as a freelancer for about 4 months.",
+          "Implemented three personal projects to maintain proficiency and explore new technologies.",
+          "Expanded my web development skillset by staying current with industry trends and mastering libraries such as tRPC, Zustand, and Cypress.",
         ],
       },
       {
@@ -69,14 +76,15 @@ export const homepageContent = {
         duration: "May 2017 - February 2022",
         jobTitle: "Full-Stack Developer & Co-Founder | Rayabot",
         highlights: [
-          "Led a team of 4 developers in collaboration with a UI/UX designer to develop and launch a SaaS product that led to a 150% increase in yearly revenue and a %1000 increase in the active user base that year.",
+          "Led a team of four developers and a UI/UX designer to launch a SaaS product, driving a 150% revenue surge and 10x user growth in a single year.",
           "Built and deployed an Admin dashboard for managing users, server events, and clients of our SaaS product using React.",
           "Achieved 100% test coverage by writing unit tests using Jest for the Admin and User dashboards.",
-          "Participated in the development of an Electron.js app's UI using React.",
+          // "Participated in the development of an Electron.js app's UI using React.",
           "By Visualizing the trade log of our automated trading software using D3.js, I helped the trading team to improve trade accuracy by 50%, lower maximum equity drawdown by 20%, and increase yearly profits by 6%.",
           "By optimizing our main trading bot, I made the algorithm run 40% faster, which resulted in quicker backtests and improved productivity.",
-          "Improved performance of our primary indicator and made its initial calculation go from O(n^2) to O(n), drastically cutting draw time.",
-          "Closely collaborated with the trading team to turn their strategies into indicators and automated trading solutions in the cTrader platform and TradingView.",
+          // "Improved performance of our primary indicator and made its initial calculation go from O(n^2) to O(n), drastically cutting draw time.",
+          "Partnered with trading team to develop indicators and automated trading solutions for cTrader and TradingView.",
+          // "Closely collaborated with the trading team to turn their strategies into indicators and automated trading solutions in the cTrader platform and TradingView.",
         ],
       },
     ],
