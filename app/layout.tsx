@@ -1,4 +1,5 @@
-import { Viewport } from "next";
+import type { Viewport } from "next";
+import "./globals.css";
 
 import "./globals.css";
 
@@ -14,7 +15,7 @@ export const generateMetadata = async () => {
       template: "%s :: Pezhman Ghavami - Full-Stack Developer",
     },
     description: "Pezhman Ghavami's Portfolio website",
-    manifest: "/site.webmanifest",
+    manifest: "/manifest.json",
     icons: {
       icon: [
         "/favicon.ico",
