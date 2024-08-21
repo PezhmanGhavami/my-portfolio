@@ -83,7 +83,7 @@ export const homepageContent = {
           "By Visualizing the trade log of our automated trading software using D3.js, I helped the trading team to improve trade accuracy by 50%, lower maximum equity drawdown by 20%, and increase yearly profits by 6%.",
           "By optimizing our main trading bot, I made the algorithm run 40% faster, which resulted in quicker backtests and improved productivity.",
           // "Improved performance of our primary indicator and made its initial calculation go from O(n^2) to O(n), drastically cutting draw time.",
-          "Partnered with trading team to develop indicators and automated trading solutions for cTrader and TradingView.",
+          "Partnered with the trading team to develop indicators and automated trading solutions for cTrader and TradingView.",
           // "Closely collaborated with the trading team to turn their strategies into indicators and automated trading solutions in the cTrader platform and TradingView.",
         ],
       },
