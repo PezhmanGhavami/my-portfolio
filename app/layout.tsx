@@ -11,8 +11,8 @@ export const generateMetadata = async () => {
   return {
     metadataBase: new URL(process.env.BASE_URL as string),
     title: {
-      default: "Pezhman Ghavami - Full-Stack Developer",
-      template: "%s :: Pezhman Ghavami - Full-Stack Developer",
+      default: "Pezhman Ghavami - Full-Stack Engineer",
+      template: "%s :: Pezhman Ghavami - Full-Stack Engineer",
     },
     description: "Pezhman Ghavami's Portfolio website",
     manifest: "/manifest.json",
