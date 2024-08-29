@@ -18,7 +18,7 @@ export const homepageContent = {
   intro: {
     title: "hey, I'm Pezhman 👋",
     subtitle:
-      "I'm a Full-Stack Developer with an IMMENSE passion for the bleeding-edge.",
+      "I'm a Full-Stack Engineer with an IMMENSE passion for the bleeding-edge.",
     links: {
       github: {
         title: "Click to visit my github",
@@ -36,7 +36,7 @@ export const homepageContent = {
   },
   about: {
     title: "About Me",
-    text: "A curious problem-solver with six+ years of experience crafting robust, scalable web solutions as a Full-Stack developer.",
+    text: "A curious problem-solver with six+ years of experience crafting robust, scalable web solutions as a Full-Stack engineer.",
   },
   workExperiences: {
     title: "Work Experience",
@@ -65,25 +65,24 @@ export const homepageContent = {
         duration: "February 2022 - April 2023",
         jobTitle: "Career Break | Medical Leave",
         highlights: [
-          "Experienced a medical leave of absence which has concluded.",
-          "Completed 5 freelance projects over a four-month period, delivering high quality web applications that increased client engagement by 30% and contributed to a 25% rise in overall website traffic.",
-          "Implemented three personal projects to maintain proficiency and explore new technologies.",
-          "Stayed current with industry trends and mastered libraries such as tRPC, Zustand, and Cypress, expanding web development skills.",
+          "Navigated a medically mandated leave of absence for six months, followed by a comprehensive recovery plan that resulted in a seamless reintegration into the workplace with no productivity loss.",
+          "Completed 5 freelance projects over a four month period, delivering high quality web applications that increased client engagement by 30% and contributed to a 25% rise in overall website traffic.",
+          "Implemented three personal projects to maintain proficiency and explore new technologies to stay current with the industry trends.",
         ],
       },
       {
         id: 1,
         duration: "May 2017 - February 2022",
-        jobTitle: "Full-Stack Developer & Co-Founder | Rayabot",
+        jobTitle: "Full-Stack Engineer & Co-Founder | Rayabot",
         highlights: [
           "Led a team of four developers and a UI/UX designer to launch a SaaS product, driving a 150% revenue surge and 10x user growth in a single year.",
           "Built and deployed a React-based Admin dashboard for managing users, server events, and clients of the SaaS product.",
           "Achieved 100% test coverage by writing unit tests using Jest for the Admin and User dashboards.",
           // "Participated in the development of an Electron.js app's UI using React.",
-          " Leveraged D3.js to visualize the trade log of the automated trading software, helping the trading team to improve trade accuracy by 50%, lower maximum equity drawdown by 20%, and increase yearly profits by 6%.",
-          "By optimizing the main trading bot, the algorithm ran 40% faster, resulting in quicker backtests and improved productivity.",
+          "Leveraged D3.js to visualize the trade log of the automated trading software, helping the trading team to improve trade accuracy by 50%, lower MDD by 20%, and increase yearly profits by 6%.",
+          "By optimizing the main trading bot, the algorithm ran 40% faster, resulting in quicker historical simulations and improved productivity.",
           // "Improved performance of our primary indicator and made its initial calculation go from O(n^2) to O(n), drastically cutting draw time.",
-          "Partnered with the trading team to develop indicators and automated trading solutions for cTrader and TradingView.",
+          "Partnered with the trading team to develop indicators and automated trading solutions for the cTrader and TradingView trading platforms.",
           // "Closely collaborated with the trading team to turn their strategies into indicators and automated trading solutions in the cTrader platform and TradingView.",
         ],
       },
