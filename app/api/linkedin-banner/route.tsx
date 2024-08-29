@@ -49,7 +49,7 @@ export const GET = async () => {
                 letterSpacing: "0.35rem",
               }}
             >
-              FULL-STACK DEVELOPER
+              FULL-STACK ENGINEER
             </h2>
             <h3
               style={{
