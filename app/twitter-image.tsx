@@ -42,7 +42,7 @@ const GET = async () => {
               fontSize: "52px",
             }}
           >
-            Full-Stack Developer
+            Full-Stack Engineer
           </h2>
         </div>
       ),
