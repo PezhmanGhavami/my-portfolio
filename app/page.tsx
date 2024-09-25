@@ -3,8 +3,6 @@ import Image from "next/image";
 
 import Navbar from "@/components/Navbar";
 
-import { metadataMaker } from "@/lib/utils";
-
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import SingleWorkExperience from "@/components/SingleWorkExperience";
@@ -16,14 +14,6 @@ import GithubLogo from "@/assets/social-logos/github.svg";
 import LinkedInLogo from "@/assets/social-logos/linkedin.svg";
 
 import { homepageContent } from "@/content/homepage";
-
-export const generateMetadata = async () => {
-  return metadataMaker({
-    title: "Pezhman Ghavami - Full-Stack Developer",
-    description: "Pezhman Ghavami's Portfolio website",
-    endpoint: "",
-  });
-};
 
 const Main = () => {
   return (
