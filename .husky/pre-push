@@ -5,6 +5,18 @@ if [ "$branch" = "main" ]; then
   exit 1
 fi
 
+echo 'Checking to see if your branch is up to date with main ⏳'
+
+git fetch origin main:main
+
+if [ $(git rev-list --count $current_branch..main) -ne 0 ]; then
+  echo "Error: Your branch is not up to date with main. ❌"
+  echo "Please pull the latest changes from main before pushing. 🙃"
+  exit 1
+fi
+
 echo 'Building the project ⏳'
 
 npx next build
+
+echo "Everything looks fine. Proceeding with push. ✅"
