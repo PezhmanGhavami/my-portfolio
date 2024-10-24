@@ -149,7 +149,7 @@ const Navbar = () => {
       {openMenu && (
         <div
           onClick={closeMenu}
-          className="fixed inset-0 z-10 h-screen w-screen bg-neutral-900/10 backdrop-blur-sm"
+          className="fixed inset-0 z-10 h-dvh w-screen bg-neutral-900/10 backdrop-blur-sm"
         />
       )}
       <header
@@ -200,7 +200,7 @@ const Navbar = () => {
           {/* Nav links and resume button */}
           <nav
             className={cn(
-              "absolute right-0 top-0 z-20 flex h-screen w-2/3 flex-1 flex-col justify-evenly",
+              "absolute right-0 top-0 z-20 flex h-dvh w-2/3 flex-1 flex-col justify-evenly",
               "bg-neutral-800 px-10 text-center text-lg transition-transform duration-300",
               "sm:static sm:ml-2 sm:h-auto sm:translate-x-0 sm:flex-row sm:items-center sm:justify-between sm:bg-transparent sm:px-0 sm:text-base",
               openMenu ? "translate-x-0" : "translate-x-full",
