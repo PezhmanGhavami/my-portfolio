@@ -1,5 +1,5 @@
 import type { Viewport } from "next";
-import "./globals.css";
+import type { ReactNode } from "react";
 
 import "./globals.css";
 
@@ -33,7 +33,7 @@ export const generateMetadata = async () => {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
