@@ -16,9 +16,8 @@ export const homepageContent = {
     },
   },
   intro: {
-    title: "hey, I'm Pezhman 👋",
-    subtitle:
-      "I'm a Full-Stack Engineer with an IMMENSE passion for the bleeding-edge.",
+    title: "Pezhman Ghavami",
+    subtitle: "Full-Stack Engineer",
     links: {
       github: {
         title: "Click to visit my github",
@@ -34,16 +33,25 @@ export const homepageContent = {
       },
     },
   },
-  about: {
-    title: "About Me",
-    text: "A curious problem-solver with six+ years of experience crafting robust, scalable web solutions as a Full-Stack engineer.",
-  },
+  // about: {
+  //   title: "About Me",
+  //   text: "A curious problem-solver with six+ years of experience crafting robust, scalable web solutions as a Full-Stack engineer.",
+  // },
   workExperiences: {
     title: "Work Experience",
     data: [
       {
+        id: 4,
+        duration: "November 2024 - Now",
+        jobTitle: "Full-Stack Engineer | MD.co.uk",
+        highlights: [
+          // "Led the development of a visual site builder for the company's website, allowing non-technical users to create and manage their own websites through drag and drop .",
+          // "Enhanced the company's SEO by 20% by improving the Lighthouse score of the website.",
+        ],
+      },
+      {
         id: 3,
-        duration: "July 2023 - Now",
+        duration: "July 2023 - November 2024",
         jobTitle: "Front-End Developer | Quarkino",
         highlights: [
           // TRIED ADDING METRICS
@@ -132,21 +140,21 @@ export const homepageContent = {
       },
     ],
   },
-  contact: {
-    title: "Get in touch",
-    subtitle:
-      "If you'd like to build something cool together or have any questions, you can contact me through the ways listed below:",
-    email: {
-      buttonText: "Say hi via an Email",
-      buttonTitle: "Click to send me an Email",
-      href: "mailto:pejmanghavami@gmail.com",
-    },
-    linkedin: {
-      buttonText: "Send me a message on Linkedin",
-      buttonTitle: "Click to go to my Linkedin profile",
-      href: "https://www.linkedin.com/in/pezhmanghavami",
-    },
-  },
+  // contact: {
+  //   title: "Get in touch",
+  //   subtitle:
+  //     "If you'd like to build something cool together or have any questions, you can contact me through the ways listed below:",
+  //   email: {
+  //     buttonText: "Say hi via an Email",
+  //     buttonTitle: "Click to send me an Email",
+  //     href: "mailto:pejmanghavami@gmail.com",
+  //   },
+  //   linkedin: {
+  //     buttonText: "Send me a message on Linkedin",
+  //     buttonTitle: "Click to go to my Linkedin profile",
+  //     href: "https://www.linkedin.com/in/pezhmanghavami",
+  //   },
+  // },
 };
 
 export type TWorkExperienceData =

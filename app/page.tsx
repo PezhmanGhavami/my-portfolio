@@ -1,14 +1,13 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 import Navbar from "@/components/Navbar";
 
-import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import SingleWorkExperience from "@/components/SingleWorkExperience";
 import SinglePersonalProject from "@/components/SinglePersonalProject";
 
-import headshot from "@/public/headshot.webp";
+// import headshot from "@/public/headshot.webp";
 import EmailLogo from "@/assets/social-logos/email.svg";
 import GithubLogo from "@/assets/social-logos/github.svg";
 import LinkedInLogo from "@/assets/social-logos/linkedin.svg";
@@ -26,10 +25,10 @@ const Main = () => {
         {/* Intro */}
         <section
           id="intro"
-          className="flex scroll-m-16 flex-col-reverse items-center text-center text-white sm:flex-row sm:justify-between sm:text-left"
+          className="flex scroll-m-16 flex-col gap-6 text-center text-white sm:text-left"
         >
           {/* Text section */}
-          <div className="flex max-w-lg flex-col gap-4">
+          <div className="flex w-full max-w-lg flex-col gap-4">
             <h1 className="text-4xl font-medium sm:text-5xl">
               {homepageContent.intro.title}
             </h1>
@@ -39,7 +38,7 @@ const Main = () => {
           </div>
           {/* Image and links section */}
           <div className="mb-6 flex flex-col justify-between sm:mb-0">
-            <div className="mb-2 flex size-36 items-center justify-center overflow-hidden rounded-full bg-gray-600 sm:size-48">
+            {/* <div className="mb-2 flex size-36 items-center justify-center overflow-hidden rounded-full bg-gray-600 sm:size-48">
               <Image
                 alt={""}
                 aria-hidden
@@ -47,8 +46,8 @@ const Main = () => {
                 src={headshot}
                 className="h-full w-full object-contain"
               />
-            </div>
-            <div className="flex items-center justify-evenly text-white">
+            </div> */}
+            <div className="flex items-center justify-center gap-4 text-white lg:justify-start">
               <Link {...homepageContent.intro.links.github} target="_blank">
                 <GithubLogo className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
               </Link>
@@ -62,12 +61,12 @@ const Main = () => {
           </div>
         </section>
         {/* ABOUT */}
-        <section className="scroll-m-16" id="about">
+        {/* <section className="scroll-m-16" id="about">
           <SectionHeading>{homepageContent.about.title}</SectionHeading>
           <div>
             <p>{homepageContent.about.text}</p>
           </div>
-        </section>
+        </section> */}
         {/* Work Experience */}
         <section className="scroll-m-16" id="work-experience">
           <SectionHeading>
@@ -91,7 +90,7 @@ const Main = () => {
           </div>
         </section>
         {/* Contact */}
-        <section id="contact">
+        {/* <section id="contact">
           <SectionHeading>{homepageContent.contact.title}</SectionHeading>
           <p>{homepageContent.contact.subtitle}</p>
           <div className="mt-8 flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-0">
@@ -113,7 +112,7 @@ const Main = () => {
               </Link>
             </Button>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );
