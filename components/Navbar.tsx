@@ -11,10 +11,10 @@ import { homepageContent } from "@/content/homepage";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
-  const aboutRef = useRef<HTMLAnchorElement>(null);
+  // const aboutRef = useRef<HTMLAnchorElement>(null);
   const workExperienceRef = useRef<HTMLAnchorElement>(null);
   const personalProjectsRef = useRef<HTMLAnchorElement>(null);
-  const contactRef = useRef<HTMLAnchorElement>(null);
+  // const contactRef = useRef<HTMLAnchorElement>(null);
 
   const toggleMenu = () => {
     setOpenMenu((prev) => !prev);
@@ -46,10 +46,10 @@ const Navbar = () => {
     if (!mainContainer) return;
 
     const refSelector = {
-      about: aboutRef,
+      // about: aboutRef,
       "work-experience": workExperienceRef,
       "personal-projects": personalProjectsRef,
-      contact: contactRef,
+      // contact: contactRef,
     };
 
     /**
@@ -79,8 +79,8 @@ const Navbar = () => {
           globalThis.window.innerHeight + Math.ceil(scrollY) >=
           globalThis.document.body.offsetHeight
         ) {
-          refSelector["contact"].current?.classList.add("text-white");
-          refSelector["contact"].current?.classList.add("font-semibold");
+          // refSelector["contact"].current?.classList.add("text-white");
+          // refSelector["contact"].current?.classList.add("font-semibold");
           refSelector["personal-projects"].current?.classList.remove(
             "text-white",
           );
@@ -112,13 +112,13 @@ const Navbar = () => {
 
   const navbarItems = useMemo(
     () => [
-      {
-        id: 1,
-        href: "#about",
-        ref: aboutRef,
-        title: "Click to go to the about section",
-        text: "About",
-      },
+      // {
+      //   id: 1,
+      //   href: "#about",
+      //   ref: aboutRef,
+      //   title: "Click to go to the about section",
+      //   text: "About",
+      // },
       {
         id: 2,
         href: "#work-experience",
@@ -133,13 +133,13 @@ const Navbar = () => {
         title: "Click to go to the personal projects section",
         text: "Personal Projects",
       },
-      {
-        id: 4,
-        href: "#contact",
-        ref: contactRef,
-        title: "Click to go to the contact section",
-        text: "Contact",
-      },
+      // {
+      //   id: 4,
+      //   href: "#contact",
+      //   ref: contactRef,
+      //   title: "Click to go to the contact section",
+      //   text: "Contact",
+      // },
     ],
     [],
   );
