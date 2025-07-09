@@ -58,7 +58,7 @@ export const GET = async () => {
                 paddingTop: "48px",
               }}
             >
-              pezhman.io | github.com/PezhmanGhavami
+              pezhmangh.ir | github.com/PezhmanGhavami
             </h3>
           </div>
         </div>
