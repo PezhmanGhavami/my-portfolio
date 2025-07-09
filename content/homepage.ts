@@ -42,11 +42,13 @@ export const homepageContent = {
     data: [
       {
         id: 4,
-        duration: "November 2024 - Now",
-        jobTitle: "Full-Stack Engineer | MD.co.uk",
+        duration: "November 2024 - June 2025",
+        jobTitle: "Senior Full-Stack Engineer | MD.co.uk",
         highlights: [
-          // "Led the development of a visual site builder for the company's website, allowing non-technical users to create and manage their own websites through drag and drop .",
-          // "Enhanced the company's SEO by 20% by improving the Lighthouse score of the website.",
+          "Architected and led the development of a versatile visual site builder, featuring drag-and-drop functionality, a CMS for blogs and services, a menu maker, a form builder, and an integrated image uploader.",
+          "Spearheaded a major refactoring of the patient-doctor web application, optimizing the codebase by removing over 10,000 lines of code and creating reusable components, significantly boosting performance and maintainability.",
+          "Consolidated five legacy websites into a single, unified platform using the new site builder, resulting in a 30% increase in website traffic and a 20% rise in user engagement.",
+          "Improved the company's online visibility by enhancing the website's Lighthouse score, which boosted SEO performance by 20%.",
         ],
       },
       {
@@ -113,7 +115,7 @@ export const homepageContent = {
         techStack:
           "Next.js • React • Tailwind CSS • SWR • iron-session • Prisma • PostgreSQL • TypeScript",
         githubURL: "https://github.com/PezhmanGhavami/clothing-shop",
-        liveURL: "https://clothingshop.pezhman.io",
+        liveURL: "https://clothingshop.pezhmangh.ir",
       },
       {
         id: 2,
@@ -125,7 +127,7 @@ export const homepageContent = {
         techStack:
           "React • Tailwind CSS • SWR • React Router • simple-peer • Vite • Socket.IO • Express.js • iron-session • Prisma • PostgreSQL • TypeScript",
         githubURL: "https://github.com/PezhmanGhavami/chat-app",
-        liveURL: "https://chatapp.pezhman.io",
+        liveURL: "https://chatapp.pezhmangh.ir",
       },
       {
         id: 3,
@@ -136,7 +138,7 @@ export const homepageContent = {
           "An app to visualize different sorting algorithms with the ability to rewind them to better understand how each algorithm works. Since there are a lot of re-renderings happening, optimization was an important aspect of development, by leveraging the useCallback hook I managed to create smoother re-renders, specially when rewinding through the results.",
         techStack: "React • Vite • TypeScript",
         githubURL: "https://github.com/PezhmanGhavami/sorting-visualizer",
-        liveURL: "https://sortingvisualizer.pezhman.io",
+        liveURL: "https://sortingvisualizer.pezhmangh.ir",
       },
     ],
   },
