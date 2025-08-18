@@ -1,21 +1,18 @@
-FROM node:24-alpine AS deps
+FROM node:24 AS deps
 WORKDIR /app
 COPY package.json ./
-RUN apk add --no-cache build-base python3
-RUN npm i --platform=linux --libc=musl --arch=x64
+RUN npm i
 RUN npm i sharp
 
-FROM node:24-alpine AS builder
+FROM node:24 AS builder
 WORKDIR /app
 COPY package.json ./
-RUN apk add --no-cache build-base python3
-RUN npm i --platform=linux --libc=musl --arch=x64
+RUN npm i 
 RUN npm i sharp
-RUN npm rebuild sharp lightningcss --platform=linux --libc=musl --arch=x64
 COPY . .
 RUN npm run build
 
-FROM node:24-alpine AS runner
+FROM node:24 AS runner
 WORKDIR /app
 
 RUN addgroup --system --gid 1001 nodejs
