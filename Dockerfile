@@ -1,14 +1,17 @@
 FROM node:24-alpine AS deps
 WORKDIR /app
 COPY package.json ./
-RUN npm ci --only=production
+RUN apk add --no-cache build-base python3
+RUN npm i --platform=linux --libc=musl --arch=x64
 RUN npm i sharp
 
 FROM node:24-alpine AS builder
 WORKDIR /app
 COPY package.json ./
-RUN npm ci
+RUN apk add --no-cache build-base python3
+RUN npm i --platform=linux --libc=musl --arch=x64
 RUN npm i sharp
+RUN npm rebuild sharp lightningcss --platform=linux --libc=musl --arch=x64
 COPY . .
 RUN npm run build
 
@@ -26,7 +29,7 @@ USER nextjs
 
 EXPOSE 3000
 
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
 
 CMD ["node", "server.js"]
