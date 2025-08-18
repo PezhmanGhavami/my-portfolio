@@ -1,12 +1,14 @@
 FROM node:24-alpine AS deps
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
 RUN npm ci --only=production
+RUN npm i sharp
 
 FROM node:24-alpine AS builder
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
 RUN npm ci
+RUN npm i sharp
 COPY . .
 RUN npm run build
 
