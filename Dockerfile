@@ -1,19 +1,11 @@
-FROM node:24-alpine AS builder
+FROM node:24 AS builder
 WORKDIR /app
-
-# Install build dependencies for native modules
-RUN apk add --no-cache \
-    build-base \
-    python3 \
-    vips-dev \
-    libc6-compat
 
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies with platform-specific sharp
+# Install dependencies
 RUN npm ci
-RUN npm install --platform=linux --arch=x64 --libc=musl sharp
 
 # Copy source code
 COPY . .
@@ -21,15 +13,12 @@ COPY . .
 # Build the application
 RUN npm run build
 
-FROM node:24-alpine AS runner
+FROM node:24-slim AS runner
 WORKDIR /app
 
-# Install runtime dependencies
-RUN apk add --no-cache vips
-
 # Create user
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN groupadd --system --gid 1001 nodejs
+RUN useradd --system --uid 1001 nextjs
 
 # Copy built application
 COPY --from=builder /app/public ./public
