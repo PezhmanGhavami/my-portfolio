@@ -1,18 +1,13 @@
-FROM node:24 AS deps
+FROM node:24-alpine AS builder
 WORKDIR /app
 COPY package.json ./
+RUN apk add --no-cache build-base python3
 RUN npm i
-RUN npm i sharp
-
-FROM node:24 AS builder
-WORKDIR /app
-COPY package.json ./
-RUN npm i 
 RUN npm i sharp
 COPY . .
 RUN npm run build
 
-FROM node:24 AS runner
+FROM node:24-alpine AS runner
 WORKDIR /app
 
 RUN addgroup --system --gid 1001 nodejs
