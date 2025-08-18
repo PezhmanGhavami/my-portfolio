@@ -1,13 +1,25 @@
-import type { Viewport } from "next";
+import type { Viewport, Metadata } from "next";
 import type { ReactNode } from "react";
+import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 export const viewport: Viewport = {
   themeColor: "#171717",
 };
 
-export const generateMetadata = async () => {
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const generateMetadata = async (): Promise<Metadata> => {
   return {
     metadataBase: new URL(process.env.BASE_URL as string),
     title: {
@@ -36,7 +48,14 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html
+      className={cn(
+        geistSans.variable,
+        geistMono.variable,
+        "scroll-smooth antialiased",
+      )}
+      lang="en"
+    >
       <body>{children}</body>
     </html>
   );

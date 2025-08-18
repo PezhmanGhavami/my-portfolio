@@ -1,5 +1,5 @@
 import Link from "next/link";
-// import Image from "next/image";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 import Navbar from "@/components/Navbar";
 
@@ -8,9 +8,6 @@ import SingleWorkExperience from "@/components/SingleWorkExperience";
 import SinglePersonalProject from "@/components/SinglePersonalProject";
 
 // import headshot from "@/public/headshot.webp";
-import EmailLogo from "@/assets/social-logos/email.svg";
-import GithubLogo from "@/assets/social-logos/github.svg";
-import LinkedInLogo from "@/assets/social-logos/linkedin.svg";
 
 import { homepageContent } from "@/content/homepage";
 
@@ -49,13 +46,13 @@ const Main = () => {
             </div> */}
             <div className="flex items-center justify-center gap-4 text-white lg:justify-start">
               <Link {...homepageContent.intro.links.github} target="_blank">
-                <GithubLogo className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
+                <FaGithub className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
               </Link>
               <Link {...homepageContent.intro.links.linkedin} target="_blank">
-                <LinkedInLogo className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
+                <FaLinkedin className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
               </Link>
               <Link {...homepageContent.intro.links.email} target="_blank">
-                <EmailLogo className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
+                <FaEnvelope className="h-7 w-7 transition-colors duration-300 hover:text-white/70" />
               </Link>
             </div>
           </div>
